@@ -3,59 +3,355 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Ire | Social Media Manager</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <title>Joshua Ire | Social Media & Digital Communications Strategist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
-    :root{
-      --ink:#0a0a0a; --ink2:#222; --ink3:#555;
-      --bg:#f8f7f4; --bg2:#edebe6;
-      --teal:#0d5c52; --teal2:#1a7a6e; --teal3:#d4f0eb;
-      --gradient: linear-gradient(135deg, #0d5c52 0%, #1a2a35 45%, #0f3d35 100%);
+    :root {
+      --ink: #0d0c1d; 
+      --ink2: #1e1b4b; 
+      --ink3: #475569;
+      --bg: #fdfdfd; 
+      --bg2: #f1f5f9;
+      /* Custom Requested Theme Variables */
+      --indigo: #312E81;
+      --coral: #F43F5E;
+      --coral-light: #ffe4e6;
+      --gradient: linear-gradient(135deg, #312E81 0%, #1e1b4b 45%, #F43F5E 100%);
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
 
-    nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;background:rgba(255,255,255,0.96);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(0,0,0,0.08);backdrop-filter:blur(12px)}
-    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--teal)}
-    .nav-links{display:flex;gap:2.5rem;list-style:none}
-    .nav-links a{font-size:0.9rem;color:var(--ink2);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;font-weight:500;transition:all 0.3s}
-    .nav-links a:hover{color:var(--teal);transform:translateY(-2px)}
-
-    .hero{display:grid;grid-template-columns:1fr 480px;min-height:100vh}
-    .hero-left{padding:6rem 4rem;display:flex;flex-direction:column;justify-content:center}
-    .hero-badge{display:inline-flex;align-items:center;gap:0.6rem;background:var(--teal3);color:var(--teal);padding:0.5rem 1.1rem;border-radius:50px;font-size:0.82rem;font-weight:600;margin-bottom:1.8rem}
-    h1{font-family:'Syne',sans-serif;font-size:3.6rem;font-weight:800;line-height:1.05;letter-spacing:-0.04em;margin-bottom:1.3rem}
-    h1 span{color:var(--teal)}
-    .hero-sub{font-size:1.2rem;color:var(--ink2);max-width:520px;margin-bottom:2.5rem}
-    .btn-primary{background:var(--teal);color:white;padding:0.9rem 2rem;border-radius:50px;font-weight:600;transition:all 0.4s}
-    .btn-primary:hover{background:var(--teal2);transform:translateY(-4px);box-shadow:0 15px 30px rgba(13,92,82,0.35)}
-    .btn-outline{border:2px solid var(--teal);color:var(--teal);padding:0.9rem 2rem;border-radius:50px;font-weight:600;transition:all 0.4s}
-    .btn-outline:hover{background:var(--teal);color:white}
-
-    .hero-right{background:var(--gradient);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-    .hero-photo{width:420px;height:520px;object-fit:cover;border-radius:24px;box-shadow:0 30px 70px rgba(0,0,0,0.5);transition:transform 0.6s ease}
-    .hero-photo:hover{transform:scale(1.06)}
-
-    section{padding:5.5rem 4rem}
-    .section-label{font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:0.8rem}
-    h2{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:1.2rem}
-
-    .services-grid, .case-grid, .toolkit-grid, .testimonial-grid{
-      display:grid;gap:2rem;margin-top:3rem;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .services-grid{grid-template-columns:repeat(auto-fit, minmax(320px, 1fr))}
-    .case-grid{grid-template-columns:repeat(auto-fit, minmax(420px, 1fr))}
 
-    .service-card, .case-card, .t-card{
-      background:var(--bg2);border:1px solid rgba(0,0,0,0.08);border-radius:20px;padding:2rem;
-      transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    html {
+      scroll-behavior: smooth;
     }
-    .service-card:hover, .case-card:hover, .t-card:hover{
-      transform:translateY(-15px);
-      box-shadow:0 25px 50px rgba(0,0,0,0.15);
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
     }
-    footer{background:var(--ink);color:#aaa;padding:3rem 4rem;text-align:center;font-size:0.9rem}
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 4rem;
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Fixed: Name Heading is Bold, Large, and Distinctive */
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--indigo);
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--ink3);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      color: var(--coral);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      min-height: calc(100vh - 80px);
+    }
+
+    .hero-left {
+      padding: 6rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--coral-light);
+      color: var(--coral);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+      width: fit-content;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 4.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.5rem;
+      color: var(--ink2);
+    }
+
+    h1 span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      color: var(--ink3);
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    /* Interactive "Swelling" Animation UI Buttons */
+    .btn-primary {
+      display: inline-block;
+      background: var(--gradient);
+      color: white;
+      padding: 1.1rem 2.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      box-shadow: 0 10px 25px rgba(49, 46, 129, 0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.08) translateY(-4px);
+      box-shadow: 0 20px 40px rgba(244, 63, 94, 0.4);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid var(--indigo);
+      color: var(--indigo);
+      padding: 1.1rem 2.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-outline:hover {
+      background: var(--indigo);
+      color: white;
+      transform: scale(1.08) translateY(-4px);
+      box-shadow: 0 15px 30px rgba(49, 46, 129, 0.25);
+    }
+
+    .hero-right {
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 2rem;
+    }
+
+    .hero-photo {
+      width: 100%;
+      max-width: 400px;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .hero-photo:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    section {
+      padding: 7rem 4rem;
+    }
+
+    .section-label {
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--coral);
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      color: var(--ink2);
+    }
+
+    .services-grid, .case-grid {
+      display: grid;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .case-grid {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .service-card, .case-card {
+      background: var(--bg2);
+      border: 1px solid rgba(0,0,0,0.03);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .service-card h3, .case-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: var(--ink2);
+    }
+
+    .service-card:hover, .case-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 40px 70px rgba(49, 46, 129, 0.08);
+      border-color: var(--coral);
+      background: white;
+    }
+
+    /* Premium Contact Engine Landing Port */
+    footer {
+      background: #090914;
+      color: #94a3b8;
+      padding: 7rem 4rem 4rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gradient);
+    }
+
+    .footer-content {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .footer-content h2 {
+      color: white;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-lead {
+      font-size: 1.25rem;
+      margin-bottom: 3.5rem;
+      color: #cbd5e1;
+    }
+
+    .download-zone {
+      background: #111126;
+      border: 1px solid #1e1e38;
+      border-radius: 32px;
+      padding: 3.5rem 2rem;
+      margin-bottom: 4rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .download-zone h3 {
+      color: white;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      font-size: 1.75rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--coral);
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      border-top: 1px solid #1e1e32;
+      padding-top: 2.5rem;
+      color: #475569;
+    }
+
+    @media (max-width: 968px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 450px; }
+      .hero-left { padding: 4rem 2rem; }
+      nav { padding: 1.2rem 2rem; }
+      h1 { font-size: 3.2rem; }
+      section { padding: 5rem 2rem; }
+      footer { padding: 5rem 2rem 3rem 2rem; }
+    }
   </style>
 </head>
 <body>
@@ -65,46 +361,102 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#work">Work</a></li>
-      <li><a href="#toolkit">Toolkit</a></li>
-      <li><a href="#process">Process</a></li>
+      <li><a href="#connect">Contact &amp; CV</a></li>
     </ul>
-    <a class="btn-primary" href="mailto:joshire321@gmail.com">Hire Me</a>
+    <!-- This now acts as a smooth anchor directly down to your footer landing page -->
+    <a class="btn-primary" href="#connect">Hire Me</a>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <div class="hero">
     <div class="hero-left">
       <div class="hero-badge">Available for Opportunities • Lagos</div>
       <h1>Social Media That <span>Drives Revenue</span></h1>
-      <p class="hero-sub">I help brands grow through data-driven strategy, high-converting content, and AI-powered community management across Instagram, TikTok, X & LinkedIn.</p>
+      <p class="hero-sub">I help brands grow through data-driven strategy, high-converting content, and AI-powered community management across Instagram, TikTok, X &amp; LinkedIn.</p>
       <div class="hero-actions">
         <a class="btn-primary" href="#work">View Case Studies</a>
-        <a class="btn-outline" href="mailto:joshire321@gmail.com">Book Discovery Call</a>
+        <a class="btn-outline" href="#connect">Get My CV</a>
       </div>
     </div>
     <div class="hero-right">
-      <img src="https://raw.githubusercontent.com/joshire/joshire.github.io/main/joshua-ire.jpg" alt="Joshua Ire" class="hero-photo">
+      <!-- Fixed the direct link location structure to make your live image show properly -->
+      <img src="joshua-ire.jpg" alt="Joshua Ire" class="hero-photo" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/joshua-ire.jpg'">
     </div>
   </div>
 
-  <!-- SERVICES -->
+  <!-- SERVICES SECTION -->
   <section id="services">
     <div class="section-label">What I Do</div>
     <h2>Full-Funnel Social Media Management</h2>
     <div class="services-grid">
-      <div class="service-card">Social Media Strategy & Audits</div>
-      <div class="service-card">Content Creation & Campaigns</div>
-      <div class="service-card">Paid Social & Ads</div>
-      <div class="service-card">Community Management</div>
-      <div class="service-card">AI Workflow Automation</div>
-      <div class="service-card">Analytics & Reporting</div>
+      <div class="service-card">
+        <h3>Strategy &amp; Audits</h3>
+        <p>Comprehensive ecosystem evaluations and growth models designed around modern performance indicators.</p>
+      </div>
+      <div class="service-card">
+        <h3>Content Architecture</h3>
+        <p>High-converting asset creation and technical campaigns custom-built for high retention across video and text channels.</p>
+      </div>
+      <div class="service-card">
+        <h3>Paid Social Frameworks</h3>
+        <p>Optimized customer acquisition setups and conversion architecture focused on scaling pipeline ROI.</p>
+      </div>
+      <div class="service-card">
+        <h3>Community Operations</h3>
+        <p>Active multi-platform audience management and engagement systems designed to support user retention.</p>
+      </div>
+      <div class="service-card">
+        <h3>AI Integration Workflows</h3>
+        <p>Deploying advanced automation loops to refine content assembly pipelines and analytical sorting speeds.</p>
+      </div>
+      <div class="service-card">
+        <h3>Intelligence &amp; Analytics</h3>
+        <p>Transforming complex multi-node database metrics into clear, actionable executive performance logs.</p>
+      </div>
     </div>
   </section>
 
-  <!-- CASE STUDIES -->
+  <!-- SELECTED WORK SECTION -->
   <section id="work">
     <div class="section-label">Selected Work</div>
     <h2>Real Results. Real Clients.</h2>
     <div class="case-grid">
-      <div class="case-card">Bridal Makeup Artist – 2.6K Followers Growth</div>
-      <div class="case-card">Ade's Gadgets – Sales Growth on X
+      <div class="case-card">
+        <h3>Bridal Makeup Artist Framework</h3>
+        <p>Engineered organic channel funnels to acquire targeted interactions, scaling localized brand visibility to over 2.6K community members.</p>
+      </div>
+      <div class="case-card">
+        <h3>Ade's Gadgets Direct Sales Systems</h3>
+        <p>Constructed transaction acquisition funnels and direct digital messaging pipelines across X (formerly Twitter).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANDING FOOTER INTERFACE WITH RESUME DOCK -->
+  <footer id="connect">
+    <div class="footer-content">
+      <h2>Let's Build Together.</h2>
+      <p class="footer-lead">Ready to deploy targeted platform systems, data-driven frameworks, and modern creative workflows to advance your digital reach?</p>
+      
+      <!-- Safe Resume Vault Area -->
+      <div class="download-zone">
+        <h3>Executive Documentation</h3>
+        <p style="color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.1rem;">Review my detailed structural experience managing social platforms, handling digital pipelines, and refining support frameworks.</p>
+        
+        <!-- Directly triggers the download of your uploaded file inside the repository root folder -->
+        <a class="btn-primary" href="Joshua_Ire_Social_Media_Manager_CV_2.pdf" download="Joshua_Ire_Resume.pdf" target="_blank">
+          <i class="ti ti-download" style="vertical-align: middle; margin-right: 6px;"></i> Download My CV / Resume
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="mailto:joshire321@gmail.com"><i class="ti ti-mail"></i> joshire321@gmail.com</a>
+        <a href="https://www.linkedin.com/in/joshire-321x" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn Profile</a>
+      </div>
+
+      <p class="copyright">&copy; 2026 Joshua Ire. All rights reserved. Managed with secure, optimized repository protocols.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
