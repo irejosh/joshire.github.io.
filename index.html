@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joshua Ire | Social Media Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <style>
+    :root{
+      --ink:#0a0a0a; --ink2:#222; --ink3:#555;
+      --bg:#f8f7f4; --bg2:#edebe6;
+      --teal:#0d5c52; --teal2:#1a7a6e; --teal3:#d4f0eb;
+      --gradient: linear-gradient(135deg, #0d5c52 0%, #1a2a35 45%, #0f3d35 100%);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;background:rgba(255,255,255,0.96);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(0,0,0,0.08);backdrop-filter:blur(12px)}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.35rem;color:var(--teal)}
+    .nav-links{display:flex;gap:2.5rem;list-style:none}
+    .nav-links a{font-size:0.9rem;color:var(--ink2);text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;font-weight:500;transition:all 0.3s}
+    .nav-links a:hover{color:var(--teal);transform:translateY(-2px)}
+
+    .hero{display:grid;grid-template-columns:1fr 480px;min-height:100vh}
+    .hero-left{padding:6rem 4rem;display:flex;flex-direction:column;justify-content:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:0.6rem;background:var(--teal3);color:var(--teal);padding:0.5rem 1.1rem;border-radius:50px;font-size:0.82rem;font-weight:600;margin-bottom:1.8rem}
+    h1{font-family:'Syne',sans-serif;font-size:3.6rem;font-weight:800;line-height:1.05;letter-spacing:-0.04em;margin-bottom:1.3rem}
+    h1 span{color:var(--teal)}
+    .hero-sub{font-size:1.2rem;color:var(--ink2);max-width:520px;margin-bottom:2.5rem}
+    .btn-primary{background:var(--teal);color:white;padding:0.9rem 2rem;border-radius:50px;font-weight:600;transition:all 0.4s}
+    .btn-primary:hover{background:var(--teal2);transform:translateY(-4px);box-shadow:0 15px 30px rgba(13,92,82,0.35)}
+    .btn-outline{border:2px solid var(--teal);color:var(--teal);padding:0.9rem 2rem;border-radius:50px;font-weight:600;transition:all 0.4s}
+    .btn-outline:hover{background:var(--teal);color:white}
+
+    .hero-right{background:var(--gradient);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .hero-photo{width:420px;height:520px;object-fit:cover;border-radius:24px;box-shadow:0 30px 70px rgba(0,0,0,0.5);transition:transform 0.6s ease}
+    .hero-photo:hover{transform:scale(1.06)}
+
+    section{padding:5.5rem 4rem}
+    .section-label{font-size:0.78rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:0.8rem}
+    h2{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:1.2rem}
+
+    .services-grid, .case-grid, .toolkit-grid, .testimonial-grid{
+      display:grid;gap:2rem;margin-top:3rem;
+    }
+    .services-grid{grid-template-columns:repeat(auto-fit, minmax(320px, 1fr))}
+    .case-grid{grid-template-columns:repeat(auto-fit, minmax(420px, 1fr))}
+
+    .service-card, .case-card, .t-card{
+      background:var(--bg2);border:1px solid rgba(0,0,0,0.08);border-radius:20px;padding:2rem;
+      transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .service-card:hover, .case-card:hover, .t-card:hover{
+      transform:translateY(-15px);
+      box-shadow:0 25px 50px rgba(0,0,0,0.15);
+    }
+    footer{background:var(--ink);color:#aaa;padding:3rem 4rem;text-align:center;font-size:0.9rem}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">Joshua Ire</span>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#toolkit">Toolkit</a></li>
+      <li><a href="#process">Process</a></li>
+    </ul>
+    <a class="btn-primary" href="mailto:joshire321@gmail.com">Hire Me</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">Available for Opportunities • Lagos</div>
+      <h1>Social Media That <span>Drives Revenue</span></h1>
+      <p class="hero-sub">I help brands grow through data-driven strategy, high-converting content, and AI-powered community management across Instagram, TikTok, X & LinkedIn.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#work">View Case Studies</a>
+        <a class="btn-outline" href="mailto:joshire321@gmail.com">Book Discovery Call</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="https://raw.githubusercontent.com/joshire/joshire.github.io/main/joshua-ire.jpg" alt="Joshua Ire" class="hero-photo">
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-label">What I Do</div>
+    <h2>Full-Funnel Social Media Management</h2>
+    <div class="services-grid">
+      <div class="service-card">Social Media Strategy & Audits</div>
+      <div class="service-card">Content Creation & Campaigns</div>
+      <div class="service-card">Paid Social & Ads</div>
+      <div class="service-card">Community Management</div>
+      <div class="service-card">AI Workflow Automation</div>
+      <div class="service-card">Analytics & Reporting</div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="work">
+    <div class="section-label">Selected Work</div>
+    <h2>Real Results. Real Clients.</h2>
+    <div class="case-grid">
+      <div class="case-card">Bridal Makeup Artist – 2.6K Followers Growth</div>
+      <div class="case-card">Ade's Gadgets – Sales Growth on X
