@@ -37,7 +37,7 @@
       overflow-x: hidden;
     }
 
-    /* NAVIGATION SYSTEM & HOVER DROPDOWN */
+    /* NAVIGATION SYSTEM */
     nav {
       display: flex;
       justify-content: space-between;
@@ -247,10 +247,11 @@
 
     .hero-photo-wrapper {
       width: 100%;
-      max-width: 360px;
-      aspect-ratio: 4/5;
+      max-width: 340px;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
-      border-radius: 24px;
+      border-radius: 50%;
+      border: 6px solid rgba(255, 255, 255, 0.15);
       box-shadow: 0 30px 60px rgba(0,0,0,0.3);
     }
 
@@ -294,7 +295,7 @@
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 1.5rem;
-      color: var(--ink2);
+      color: var(--indigo);
     }
 
     .services-grid {
@@ -334,7 +335,7 @@
       border-color: var(--indigo);
     }
 
-    /* PREMIUM CASE STUDIES WITH ADJUSTED HIGH-CONTRAST BUTTONS */
+    /* PREMIUM CASE STUDIES SECTION */
     .case-container {
       display: flex;
       flex-direction: column;
@@ -343,19 +344,20 @@
     }
 
     .case-card-premium {
-      background: white;
-      border: 1px solid rgba(0,0,0,0.06);
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
       border-radius: 28px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       overflow: hidden;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.02);
-      transition: all 0.5s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+      transition: all 0.4s ease;
     }
 
     .case-card-premium:hover {
-      box-shadow: 0 35px 70px rgba(49, 46, 129, 0.08);
-      border-color: var(--coral);
+      box-shadow: 0 30px 60px rgba(49, 46, 129, 0.12);
+      border-color: var(--indigo);
+      background: white;
     }
 
     .case-info {
@@ -396,40 +398,42 @@
     .case-desc {
       color: var(--ink3);
       font-size: 1.05rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
-    /* Redesigned High-Contrast Action Elements for Case Studies */
+    /* HIGH CONTRAST BUTTON STYLING FIXES */
     .btn-case-cta {
-      display: inline-block;
-      background: var(--indigo);
-      color: white !important;
-      border: 2px solid var(--indigo);
-      padding: 0.9rem 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient);
+      color: #ffffff !important;
+      padding: 1.1rem 2.2rem;
       border-radius: 50px;
       font-weight: 700;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       width: fit-content;
-      box-shadow: 0 4px 12px rgba(49, 46, 129, 0.2);
+      box-shadow: 0 8px 20px rgba(244, 63, 94, 0.3);
+      border: 2px solid transparent;
     }
 
     .btn-case-cta:hover {
-      background: var(--coral);
-      border-color: var(--coral);
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(49, 46, 129, 0.4);
+      border-color: #ffffff;
     }
 
     .metric-box {
-      border-left: 3px solid var(--coral);
+      border-left: 4px solid var(--coral);
       padding-left: 1.2rem;
     }
 
     .metric-value {
       font-family: 'Syne', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 800;
       color: white;
       line-height: 1;
@@ -441,7 +445,7 @@
       margin-top: 0.3rem;
     }
 
-    /* GLOWING HIGH-CONTRAST MIXED TOOL COMPONENT POOL */
+    /* GLOWING MIXED TOOL AMBIENT DOCK */
     .ai-universe {
       position: absolute;
       top: 0;
@@ -456,7 +460,7 @@
     .ai-node {
       position: absolute;
       background: #111126;
-      border: 1px solid rgba(244, 63, 94, 0.4);
+      border: 1px solid rgba(244, 63, 94, 0.5);
       color: #f1f5f9;
       padding: 0.7rem 1.4rem;
       border-radius: 50px;
@@ -465,7 +469,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      box-shadow: 0 0 20px rgba(244, 63, 94, 0.25);
+      box-shadow: 0 0 25px rgba(244, 63, 94, 0.35);
     }
 
     @keyframes floatAlpha {
@@ -633,18 +637,17 @@
       </div>
     </div>
     
-    <!-- Verified Image Stack Enclosure -->
+    <!-- Image Fix: Updated with strict file extension mappings (.jpeg) -->
     <div class="hero-right">
       <div class="hero-photo-wrapper">
-        <img src="joshua-ire.jpg" alt="Joshua Ire Portrait" class="hero-photo" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/joshua-ire.jpg'">
+        <img src="joshua-ire.jpeg" alt="Joshua Ire Portrait" class="hero-photo">
       </div>
       <div class="hero-photo-wrapper-sub">
-        <img src="image_e1df60.png" alt="Joshua Ire In Session" class="hero-photo-sub" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/image_e1df60.png'">
+        <img src="image_e1df60.jpeg" alt="Joshua Ire Content Session" class="hero-photo-sub">
       </div>
     </div>
   </div>
 
-  <!-- REPOSITIONED FOCUS CORE SKILLS AREA -->
   <section id="services">
     <div class="section-label">Expertise Blueprint</div>
     <h2>Social First Frameworks</h2>
@@ -672,7 +675,7 @@
     </div>
   </section>
 
-  <!-- RESTRUCTURED PORTFOLIO WORK EXPERIENCE SECTION WITH HIGH-CONTRAST CTAS -->
+  <!-- CASE STUDIES WITH NEW VIBRANT, HIGH-CONTRAST GRADIENT CTAs -->
   <section id="work">
     <div class="section-label">Enterprise Value Tracking</div>
     <h2>Proven Strategic Impact</h2>
@@ -747,8 +750,6 @@
 
   <!-- LANDING SITE FOOTER PORTAL WITH GLOWING MIXED TOOL BADGES -->
   <footer id="connect">
-    
-    <!-- Highly Visible, Glowing Mixed Tech & Marketing Tool Dock -->
     <div class="ai-universe">
       <div class="ai-node node-1"><i class="ti ti-brand-meta"></i> Meta Ads / Insta</div>
       <div class="ai-node node-2"><i class="ti ti-sparkles"></i> Claude &amp; Gemini</div>
@@ -775,7 +776,7 @@
         <a href="https://www.linkedin.com/in/joshire-321x" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn System</a>
       </div>
 
-      <p class="copyright">&copy; 2026 Joshua Ire. All rights reserved. Powered by optimized automated web architecture protocols.</p>
+      <p class="copyright">&copy; 2026 Joshua Ire. All rights reserved.</p>
     </div>
   </footer>
 
