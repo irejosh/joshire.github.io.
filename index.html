@@ -3,338 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Joshua Ire — Social Media & Digital Growth Strategist. Organic content strategies, community management, and AI-powered campaign frameworks based in Lagos." />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Joshua Ire | Social Media & Digital Growth Strategist" />
-  <meta property="og:description" content="Building high-impact organic content strategies that convert visibility into direct business growth." />
-  <meta property="og:image" content="https://irejosh.github.io/joshire.github.io/joshua-ire.jpeg" />
-  <meta property="og:url" content="https://irejosh.github.io/joshire.github.io/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <title>Joshua Ire | Social Media & Digital Growth Strategist</title>
-
-  <!-- Fonts -->
+  <title>Joshua Ire | Social Media Manager & Growth Strategist</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet" />
 
   <style>
-    /* ─── RESET & VARIABLES ──────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    /* ─── NEO-EDITORIAL TECH PALETTE ─────────────────────────────── */
     :root {
-      --ink:       #0d0d0d;
-      --paper:     #f4f0e8;
-      --accent:    #c8ff00;
-      --accent2:   #ff4d1c;
-      --mid:       #6b6b6b;
-      --border:    #d4cfc4;
-      --card-bg:   #ffffff;
-      --ff-display: 'Bebas Neue', sans-serif;
-      --ff-body:    'DM Sans', sans-serif;
-      --ff-mono:    'DM Mono', monospace;
+      --bg:          #0b0c10;       /* Rich sleek dark background */
+      --surface:     #141722;       /* Premium contrasting card surface */
+      --text-main:   #f3f4f6;       /* Crisp off-white main typography */
+      --text-muted:  #9ca3af;       /* Soft readable grey for structural copy */
+      --accent:      #39ff14;       /* Laser-sharp high conversion Neon Green */
+      --accent-rgb:  57, 255, 20;
+      --border:      #1f2438;       /* Clean structured borders */
+      
+      --ff-display:  'Bebas Neue', sans-serif;
+      --ff-body:     'Space Grotesk', sans-serif;
+      --ff-mono:     'Space Mono', monospace;
     }
 
-    html { scroll-behavior: smooth; }
+    /* ─── RESET & REPAIR BASE ELEMENTS ───────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text-main); }
+    body { font-family: var(--ff-body); line-height: 1.6; overflow-x: hidden; }
 
-    body {
-      font-family: var(--ff-body);
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* ─── NOISE TEXTURE OVERLAY ──────────────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9999; opacity: 0.4;
-    }
-
-    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    /* ─── NAVIGATION FRAMEWORK ───────────────────────────────────── */
     header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; inset-inline: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1.2rem 4%;
-      background: rgba(244, 240, 232, 0.9);
+      padding: 1.5rem 6%;
+      background: rgba(11, 12, 16, 0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
     .logo {
       font-family: var(--ff-display);
-      font-size: 1.6rem;
-      letter-spacing: 0.04em;
-      color: var(--ink);
-      text-decoration: none;
+      font-size: 1.8rem; letter-spacing: 0.05em;
+      color: var(--text-main); text-decoration: none;
     }
-
-    .logo span { color: var(--accent2); }
+    .logo span { color: var(--accent); }
 
     nav { display: flex; align-items: center; gap: 2.5rem; }
-
     nav a {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--mid);
-      text-decoration: none;
-      transition: color 0.2s;
+      font-family: var(--ff-mono); font-size: 0.8rem;
+      color: var(--text-muted); text-decoration: none;
+      text-transform: uppercase; transition: color 0.2s;
     }
-
-    nav a:hover { color: var(--ink); }
+    nav a:hover { color: var(--accent); }
 
     .nav-cta {
-      background: var(--ink);
-      color: var(--paper) !important;
-      padding: 0.5rem 1.2rem;
-      border-radius: 2px;
+      background: var(--text-main); color: var(--bg) !important;
+      padding: 0.5rem 1.2rem; font-weight: 700; border-radius: 4px;
     }
+    .nav-cta:hover { background: var(--accent); }
 
-    .nav-cta:hover { background: var(--accent2); color: var(--paper) !important; }
-
-    /* Hamburger Mobile Toggle styling */
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 101; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); transition: all 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-nav {
-      display: none;
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99;
-      background: var(--paper);
-      flex-direction: column; align-items: center; justify-content: center;
-      gap: 2.5rem;
-    }
-
-    .mobile-nav.open { display: flex; }
-
-    .mobile-nav a {
-      font-family: var(--ff-display);
-      font-size: 2.8rem;
-      letter-spacing: 0.05em;
-      color: var(--ink);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .mobile-nav a:hover { color: var(--accent2); }
-
-    /* ─── HERO ───────────────────────────────────────────────────── */
+    /* ─── HERO SPLIT-SCREEN LAYOUT ────────────────────────────────── */
     .hero {
-      min-height: 100svh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
       padding-top: 5rem;
-      overflow: hidden;
     }
 
     .hero-left {
       display: flex; flex-direction: column; justify-content: center;
-      padding: 6% 5% 6% 6%;
-      position: relative;
+      padding: 6% 8%;
+      border-right: 1px solid var(--border);
     }
 
     .hero-tag {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-family: var(--ff-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--mid);
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: var(--ff-mono); font-size: 0.75rem;
+      text-transform: uppercase; color: var(--accent);
       margin-bottom: 1.5rem;
     }
-
-    .hero-tag::before {
-      content: '';
-      display: block; width: 24px; height: 2px;
-      background: var(--accent2);
-    }
-
-    .hero-tag .dot {
-      width: 6px; height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.7); }
+    .hero-tag .pulse {
+      width: 8px; height: 8px; background: var(--accent);
+      border-radius: 50%; box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.6);
     }
 
     h1 {
       font-family: var(--ff-display);
-      font-size: clamp(3.2rem, 6vw, 6.5rem);
-      line-height: 0.95;
-      letter-spacing: 0.02em;
-      color: var(--ink);
-      margin-bottom: 1.5rem;
+      font-size: clamp(3.2rem, 6.5vw, 6rem);
+      line-height: 0.9; letter-spacing: 0.01em;
+      text-transform: uppercase; margin-bottom: 2rem;
     }
-
-    h1 .line-accent { color: var(--accent2); }
-    h1 .line-outline {
-      -webkit-text-stroke: 2px var(--ink);
+    h1 .outline {
+      -webkit-text-stroke: 1px var(--text-muted);
       color: transparent;
     }
 
     .hero-desc {
-      font-size: 1.05rem;
-      color: var(--mid);
-      max-width: 480px;
-      margin-bottom: 2.5rem;
-      line-height: 1.75;
-      font-weight: 300;
+      font-size: 1.1rem; color: var(--text-muted);
+      max-width: 540px; margin-bottom: 3rem;
     }
 
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: var(--ink);
-      color: var(--paper);
-      padding: 0.85rem 2rem;
-      font-family: var(--ff-body);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 2px solid var(--ink);
-      transition: all 0.25s;
-      display: inline-flex; align-items: center; gap: 0.5rem;
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+    
+    .btn {
+      padding: 1rem 2rem; font-family: var(--ff-mono);
+      font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+      text-decoration: none; border-radius: 4px; transition: all 0.2s;
+      cursor: pointer; display: inline-flex; align-items: center;
     }
+    .btn-primary { background: var(--accent); color: var(--bg); border: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.3); }
+    
+    .btn-secondary { border: 1px solid var(--border); color: var(--text-main); }
+    .btn-secondary:hover { background: var(--surface); border-color: var(--text-muted); }
 
-    .btn-primary:hover {
-      background: var(--accent2);
-      border-color: var(--accent2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--ink);
-      padding: 0.85rem 2rem;
-      font-family: var(--ff-body);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 2px solid var(--ink);
-      transition: all 0.25s;
-      display: inline-flex; align-items: center; gap: 0.5rem;
-    }
-
-    .btn-outline:hover { background: var(--ink); color: var(--paper); }
-
-    .hero-meta {
-      margin-top: 3rem;
-      display: flex; flex-wrap: wrap; gap: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .hero-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
-    .hero-meta-item .label {
-      font-family: var(--ff-mono);
-      font-size: 0.7rem; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--mid);
-    }
-    .hero-meta-item .value { font-size: 0.9rem; font-weight: 500; color: var(--ink); }
-
+    /* ─── DYNAMIC HERO PORTRAIT & FALLBACK ────────────────────────── */
     .hero-right {
-      position: relative;
-      background: var(--ink);
+      position: relative; background: #0e111a;
+      display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
-
     .hero-right img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      opacity: 0.8;
-      display: block;
+      width: 100%; height: 100%; object-fit: cover; z-index: 2;
+    }
+    .image-placeholder {
+      position: absolute; inset: 0; z-index: 1;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #10121a 0%, #171b29 100%);
+      padding: 2rem; text-align: center;
+    }
+    .image-placeholder p { font-family: var(--ff-mono); font-size: 0.85rem; color: var(--text-muted); }
+
+    /* ─── SCROLLABLE STRUCTURAL SECTIONS ─────────────────────────── */
+    .content-section {
+      padding: 7rem 8%;
+      border-top: 1px solid var(--border);
+    }
+    .section-meta {
+      font-family: var(--ff-mono); color: var(--accent);
+      font-size: 0.8rem; margin-bottom: 1rem; display: block;
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    h2 { font-family: var(--ff-display); font-size: 3.8rem; margin-bottom: 2.5rem; letter-spacing: 0.02em; }
+    
+    /* GRIDS & LAYOUT CARDS */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .card { background: var(--surface); padding: 2.5rem; border: 1px solid var(--border); border-radius: 4px; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--text-muted); }
+    .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 500; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    /* ─── PROJECTS / CASE STUDIES SECTION ───────────────────────── */
+    .project-card {
+      display: flex; flex-direction: column; justify-content: space-between;
+      min-height: 320px;
+    }
+    .project-metrics {
+      display: inline-block; margin-top: 1.5rem; padding: 0.3rem 0.8rem;
+      background: rgba(57, 255, 20, 0.1); border: 1px solid var(--accent);
+      color: var(--accent); font-family: var(--ff-mono); font-size: 0.8rem; border-radius: 2px;
     }
 
-    .hero-overlay {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 2rem;
-      background: linear-gradient(to top, rgba(13,13,13,0.9) 0%, transparent 100%);
+    /* ─── CONNECT & CONTACT FORM SECTION ────────────────────────── */
+    .connect-layout {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem;
     }
-
-    .status-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--accent);
-      color: var(--ink);
-      font-family: var(--ff-mono);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.4rem 0.9rem;
-      border-radius: 20px;
+    .contact-details p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .contact-details strong { color: var(--text-main); }
+    
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-family: var(--ff-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); }
+    .form-group input, .form-group textarea {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 1rem; color: var(--text-main); font-family: var(--ff-body);
+      font-size: 0.95rem; border-radius: 4px; transition: border-color 0.2s;
     }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
 
-    .status-badge::before {
-      content: ''; width: 6px; height: 6px;
-      background: var(--ink); border-radius: 50%;
-    }
-
-    /* ─── SECTION BASE ───────────────────────────────────────────── */
-    section { padding: 6rem 6%; }
-
-    .section-label {
-      font-family: var(--ff-mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent2);
-      margin-bottom: 0.75rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-
-    .section-label::before {
-      content: '//'; color: var(--border); font-weight: 700;
-    }
-
-    h2 {
-      font-family: var(--ff-display);
-      font-size: clamp(2.5rem, 4vw, 4rem);
-      line-height: 1;
-      letter-spacing: 0.02em;
-      color: var(--ink);
-      margin-bottom: 3rem;
-    }
-
-    /* ─── SCROLL ANIMATION ───────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-
-    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .header { padding: 1.2rem 5%; }
-      nav { display: none; }
-      .hamburger { display: flex; }
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-right { height: 60svh; order: -1; }
-      .hero-left { padding: 5rem 5% 4rem; }
-    }
-
-    @media (max-width: 680px) {
-      h1 { font-size: 3.5rem; }
-      .hero-actions { flex-direction: column; }
-      .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+    /* ─── ADAPTIVE MEDIA RESPONSIVENESS ──────────────────────────── */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 450px; order: -1; }
+      .hero-left { border-right: none; padding: 8rem 6% 4rem; }
+      .connect-layout { grid-template-columns: 1fr; gap: 3rem; }
+      nav { display: none; } /* Kept clean for core layout review */
     }
   </style>
 </head>
@@ -344,88 +195,117 @@
     <a href="#" class="logo">Joshua Ire<span>.</span></a>
     <nav>
       <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#connect" class="nav-cta">Let's Talk</a>
+      <a href="#work">Case Studies</a>
+      <a href="#connect" class="nav-cta">Let's Connect</a>
     </nav>
-    <button class="hamburger" aria-label="Toggle Mobile Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </header>
-
-  <!-- Mobile Dropdown Navigation -->
-  <div class="mobile-nav">
-    <a href="#services" class="mobile-link">Services</a>
-    <a href="#work" class="mobile-link">Work</a>
-    <a href="#connect" class="mobile-link">Connect</a>
-  </div>
 
   <main>
     <section class="hero">
-      <div class="hero-left reveal">
+      <div class="hero-left">
         <div class="hero-tag">
-          <span class="dot"></span> Growth & Strategy
+          <span class="pulse"></span> Open for Strategic Growth Initiatives
         </div>
-        <h1>Building <br><span class="line-outline">High-Impact</span><br> Organic Channels</h1>
-        <p class="hero-desc">Turning digital footprints into conversion frameworks. I construct social blueprints tailored to scale identity and brand equity systematically.</p>
+        <h1>Data-Driven <br><span class="outline">Social Media</span><br> Optimization</h1>
+        <p class="hero-desc">I map high-conversion social blueprints engineered to amplify community acquisition and visibility using multi-platform pipeline workflows.</p>
         
-        <div class="hero-actions reveal reveal-delay-1">
-          <a href="#connect" class="btn-primary">Get Framework</a>
-          <a href="#work" class="btn-outline">View Cases</a>
-        </div>
-
-        <div class="hero-meta reveal reveal-delay-2">
-          <div class="hero-meta-item">
-            <span class="label">Based In</span>
-            <span class="value">Lagos, Nigeria</span>
-          </div>
-          <div class="hero-meta-item">
-            <span class="label">Focus</span>
-            <span class="value">Organic / AI Workflows</span>
-          </div>
+        <div class="hero-actions">
+          <a href="#connect" class="btn btn-primary">Initiate Project</a>
+          <a href="#work" class="btn btn-secondary">Review Metrics</a>
         </div>
       </div>
 
-      <div class="hero-right reveal">
-        <img src="https://irejosh.github.io/joshire.github.io/joshua-ire.jpeg" alt="Joshua Ire Portrait" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <!-- Visual Fallback in case your personal picture fails to load -->
-        <div class="hero-overlay">
-          <span class="status-badge">Available for Projects</span>
+      <div class="hero-right">
+        <img src="joshua-ire.jpeg" alt="Joshua Ire Portrait Portfolio" onerror="this.style.display='none';">
+        <div class="image-placeholder">
+          <p style="text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem;">[ Portrait Visual Slot ]</p>
+          <p style="font-size: 0.75rem; color: var(--accent); font-family: var(--ff-mono);">File Required: joshua-ire.jpeg</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="content-section">
+      <span class="section-meta">// Operational Capabilities</span>
+      <h2>Core Growth Matrix</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Campaign Architecture</h3>
+          <p>Deploying organic asset matrices tailored across platforms including Instagram, X, TikTok, and LinkedIn to generate predictable reach patterns.</p>
+        </div>
+        <div class="card">
+          <h3>Audience Infrastructure</h3>
+          <p>Structuring interactive support ecosystems and communities that foster genuine connection, brand retention, and organic advocacy metrics.</p>
+        </div>
+        <div class="card">
+          <h3>Real-Time Analytics</h3>
+          <p>Translating audience impressions, frequency distributions, and conversion performance metrics into iterative strategies to ensure measurable ROI.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="content-section">
+      <span class="section-meta">// Execution Track Record</span>
+      <h2>Selected Initiatives</h2>
+      <div class="grid">
+        <div class="card project-card">
+          <div>
+            <h3>Healthcare Awareness Framework</h3>
+            <p>Developed multi-platform strategic frameworks designed to optimize traffic pipelines, resulting in scaling overall visibility and community trust metrics.</p>
+          </div>
+          <span class="project-metrics">Healthcare Campaign System</span>
+        </div>
+        <div class="card project-card">
+          <div>
+            <h3>Enterprise Communication Blueprint</h3>
+            <p>Coordinated operational structures for enterprise project lines, ensuring real-time metrics auditing and secure communication funnels.</p>
+          </div>
+          <span class="project-metrics">Information Infrastructure</span>
+        </div>
+        <div class="card project-card">
+          <div>
+            <h3>Renewable Lead Generation</h3>
+            <p>Executed highly targeted technical campaigns focused on social market positioning to rapidly increase awareness parameters.</p>
+          </div>
+          <span class="project-metrics">Targeted Ads & Acquisition</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect" class="content-section">
+      <span class="section-meta">// Strategic Interface</span>
+      <h2>Let's Scale Together</h2>
+      
+      <div class="connect-layout">
+        <div class="contact-details">
+          <p>Ready to introduce data-led strategies to your team's current digital workspace? Let's orchestrate an exploratory session.</p>
+          <p><strong>Location:</strong> Lagos, Nigeria</p>
+          <p><strong>Channel:</strong> joshire321@gmail.com</p>
+          
+          <a href="Joshua_Ire_Social_Media_Manager_CV.pdf" class="btn btn-secondary" style="margin-top: 1rem;" download>
+            Download Official CV (PDF)
+          </a>
+        </div>
+
+        <div>
+          <form class="contact-form" action="https://formspree.io/f/your-id" method="POST" onsubmit="alert('Portfolio Pipeline Connected!'); return false;">
+            <div class="form-group">
+              <label for="name">Identity / Organization</label>
+              <input type="text" id="name" required placeholder="Name or Company" />
+            </div>
+            <div class="form-group">
+              <label for="email">Communication Channel</label>
+              <input type="email" id="email" required placeholder="yourname@domain.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">Project Parameters</label>
+              <textarea id="message" rows="5" required placeholder="Outline your timeline, goals, or objectives..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Dispatch Intent</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Dynamic Logic for Mobile UI Toggling and Scroll View Triggers -->
-  <script>
-    // Hamburger Menu Toggling Mechanism
-    const hamburger = document.querySelector('.hamburger');
-    const mobileNav = document.querySelector('.mobile-nav');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    function toggleMenu() {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    }
-
-    hamburger.addEventListener('click', toggleMenu);
-    mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-    // Scroll Reveal Interaction Engine (IntersectionObserver API)
-    const revealElements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Animates strictly once
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
