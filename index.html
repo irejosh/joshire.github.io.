@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Ire | Technical Social Media & Digital Automation Engineer</title>
+  <title>Joshua Ire | Social Media &amp; Digital Growth Strategist</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
@@ -77,18 +77,11 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       font-weight: 700;
-      transition: all 0.3s ease;
-      display: inline-block;
       padding: 0.5rem 0;
     }
 
     .nav-links a:hover {
       color: var(--coral);
-    }
-
-    /* Core Nav Dropdown Styling Engine */
-    .dropdown {
-      position: relative;
     }
 
     .dropdown-menu {
@@ -177,9 +170,9 @@
 
     h1 {
       font-family: 'Syne', sans-serif;
-      font-size: 4.2rem;
+      font-size: 4rem;
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.12;
       letter-spacing: -0.04em;
       margin-bottom: 1.5rem;
       color: var(--ink2);
@@ -192,7 +185,7 @@
     }
 
     .hero-sub {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: var(--ink3);
       max-width: 580px;
       margin-bottom: 2.5rem;
@@ -204,7 +197,6 @@
       align-items: center;
     }
 
-    /* Swelling Interactive Custom Buttons */
     .btn-primary {
       display: inline-block;
       background: var(--gradient);
@@ -240,50 +232,47 @@
       background: var(--indigo);
       color: white;
       transform: scale(1.08) translateY(-4px);
-      box-shadow: 0 15px 30px rgba(49, 46, 129, 0.25);
     }
 
-    /* Side Panel Image Display Dock */
+    /* Fixed Image Column Structure Container */
     .hero-right {
       background: var(--gradient);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       padding: 4rem 2rem;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
-    .hero-photo-container {
+    .hero-photo-wrapper {
       width: 100%;
-      max-width: 380px;
-      position: relative;
-    }
-
-    .hero-photo {
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
+      max-width: 360px;
+      aspect-ratio: 4/5;
+      overflow: hidden;
       border-radius: 24px;
       box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-      transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    .hero-photo:hover {
-      transform: scale(1.05);
-    }
-
-    .hero-photo-sub {
+    .hero-photo-wrapper-sub {
       width: 100%;
-      height: 260px;
-      object-fit: cover;
+      max-width: 360px;
+      aspect-ratio: 16/10;
+      overflow: hidden;
       border-radius: 24px;
       box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-      transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    .hero-photo-sub:hover {
-      transform: scale(1.05);
+    .hero-photo, .hero-photo-sub {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-photo-wrapper:hover .hero-photo,
+    .hero-photo-wrapper-sub:hover .hero-photo-sub {
+      transform: scale(1.06);
     }
 
     section {
@@ -308,7 +297,6 @@
       color: var(--ink2);
     }
 
-    /* SERVICES STYLE LAYOUT */
     .services-grid {
       display: grid;
       gap: 2rem;
@@ -346,7 +334,7 @@
       border-color: var(--indigo);
     }
 
-    /* PREMIUM CASE STUDIES SECTION */
+    /* PREMIUM CASE STUDIES WITH ADJUSTED HIGH-CONTRAST BUTTONS */
     .case-container {
       display: flex;
       flex-direction: column;
@@ -411,6 +399,29 @@
       margin-bottom: 2rem;
     }
 
+    /* Redesigned High-Contrast Action Elements for Case Studies */
+    .btn-case-cta {
+      display: inline-block;
+      background: var(--indigo);
+      color: white !important;
+      border: 2px solid var(--indigo);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: fit-content;
+      box-shadow: 0 4px 12px rgba(49, 46, 129, 0.2);
+    }
+
+    .btn-case-cta:hover {
+      background: var(--coral);
+      border-color: var(--coral);
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+    }
+
     .metric-box {
       border-left: 3px solid var(--coral);
       padding-left: 1.2rem;
@@ -430,7 +441,7 @@
       margin-top: 0.3rem;
     }
 
-    /* FLOATING AI AMBIENT SHADOW ANIMATIONS */
+    /* GLOWING HIGH-CONTRAST MIXED TOOL COMPONENT POOL */
     .ai-universe {
       position: absolute;
       top: 0;
@@ -444,20 +455,19 @@
 
     .ai-node {
       position: absolute;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: rgba(255,255,255,0.3);
-      padding: 0.6rem 1.2rem;
+      background: #111126;
+      border: 1px solid rgba(244, 63, 94, 0.4);
+      color: #f1f5f9;
+      padding: 0.7rem 1.4rem;
       border-radius: 50px;
       font-size: 0.8rem;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      gap: 0.6rem;
+      box-shadow: 0 0 20px rgba(244, 63, 94, 0.25);
     }
 
-    /* Keyframe Translation Loops */
     @keyframes floatAlpha {
       0% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-25px) rotate(3deg); }
@@ -469,12 +479,11 @@
       100% { transform: translateY(0px) rotate(0deg); }
     }
 
-    .node-gemini { top: 20%; left: 10%; animation: floatAlpha 6s infinite ease-in-out; }
-    .node-claude { top: 60%; left: 15%; animation: floatBeta 7s infinite ease-in-out; }
-    .node-chatgpt { top: 30%; right: 12%; animation: floatBeta 5s infinite ease-in-out; }
-    .node-grok { top: 75%; right: 18%; animation: floatAlpha 8s infinite ease-in-out; }
+    .node-1 { top: 15%; left: 8%; animation: floatAlpha 6s infinite ease-in-out; }
+    .node-2 { top: 55%; left: 12%; animation: floatBeta 7s infinite ease-in-out; }
+    .node-3 { top: 25%; right: 10%; animation: floatBeta 5s infinite ease-in-out; }
+    .node-4 { top: 70%; right: 15%; animation: floatAlpha 8s infinite ease-in-out; }
 
-    /* FOOTER AREA SETUP */
     footer {
       background: #06060f;
       color: #94a3b8;
@@ -562,33 +571,29 @@
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; }
       .hero-right { flex-direction: row; justify-content: center; padding: 4rem 2rem; }
-      .hero-photo-container { max-width: 45%; }
       .case-card-premium { grid-template-columns: 1fr; }
       .case-metrics-panel { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
     }
 
     @media (max-width: 768px) {
       .hero-right { flex-direction: column; }
-      .hero-photo-container { max-width: 100%; }
       .hero-left { padding: 4rem 2rem; }
       nav { padding: 1.2rem 2rem; }
       h1 { font-size: 3rem; }
       section { padding: 5rem 2rem; }
       footer { padding: 5rem 2rem 3rem 2rem; }
-      .nav-links { display: none; } /* Mobile optimization fallback */
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP HEADER LOGO & DROPDOWN NAVIGATION LINK -->
   <nav>
     <span class="nav-logo">Joshua Ire</span>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Strategy</a></li>
+      <li><a href="#work">Case Studies</a></li>
       
-      <!-- Interactive CSS Hover Dropdown Menu System -->
       <li class="dropdown">
         <a href="#connect" class="dropdown-trigger">Contact &amp; CV <i class="ti ti-chevron-down" style="font-size: 0.8rem; vertical-align: middle;"></i></a>
         <ul class="dropdown-menu">
@@ -614,15 +619,13 @@
     <a class="btn-primary" href="#connect">Hire Me</a>
   </nav>
 
-  <!-- HERO PANEL: MULTI-IMAGE INTEGRATED ENGINE -->
+  <!-- SOCIAL IDENTITY MARKETING HERO DOCK -->
   <div class="hero">
     <div class="hero-left">
-      <!-- Clear Placement Value Statement Metrics -->
-      <div class="hero-badge"><i class="ti ti-circle-filled" style="font-size: 0.6rem; animation: pulse 2s infinite;"></i> Open to Remote &amp; Hybrid Opportunities</div>
-      <h1>Engineering High-Impact <span>Digital Growth</span></h1>
+      <div class="hero-badge"><i class="ti ti-circle-filled" style="font-size: 0.6rem;"></i> Open to Remote &amp; Hybrid Roles</div>
+      <h1>Social Media Management That <span>Scales Brands</span></h1>
       
-      <!-- Premium Text Focus Architecture Update -->
-      <p class="hero-sub">I specialize in high-converting website design, deploying automated AI tool agents, API workflows, and crafting immersive interactive user experiences that convert attention into direct brand revenue.</p>
+      <p class="hero-sub">I build high-impact organic content strategies, manage community engagement funnels, and design target audience campaigns that convert visibility into direct business growth. Backed by workflows in modern AI orchestration tools, automated workflows, and front-end interface adjustments to maximize lead conversions.</p>
       
       <div class="hero-actions">
         <a class="btn-primary" href="#work">Explore Case Studies</a>
@@ -630,60 +633,58 @@
       </div>
     </div>
     
-    <!-- Professional Structural Dual-Image Stack Enclosure -->
+    <!-- Verified Image Stack Enclosure -->
     <div class="hero-right">
-      <div class="hero-photo-container">
+      <div class="hero-photo-wrapper">
         <img src="joshua-ire.jpg" alt="Joshua Ire Portrait" class="hero-photo" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/joshua-ire.jpg'">
       </div>
-      <div class="hero-photo-container">
+      <div class="hero-photo-wrapper-sub">
         <img src="image_e1df60.png" alt="Joshua Ire In Session" class="hero-photo-sub" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/image_e1df60.png'">
       </div>
     </div>
   </div>
 
-  <!-- EXPANDED TECHNICAL SKILLS SECTION -->
+  <!-- REPOSITIONED FOCUS CORE SKILLS AREA -->
   <section id="services">
-    <div class="section-label">Core Competencies</div>
-    <h2>Advanced Technical Capabilities</h2>
+    <div class="section-label">Expertise Blueprint</div>
+    <h2>Social First Frameworks</h2>
     <div class="services-grid">
       <div class="service-card">
-        <i class="ti ti-browser"></i>
-        <h3>Website Design &amp; Architecture</h3>
-        <p>Building lightning-fast, premium user-centric layouts optimized for absolute scannability and cross-device conversion funnels.</p>
+        <i class="ti ti-speakerphone"></i>
+        <h3>Social Media Management</h3>
+        <p>End-to-end management, multi-channel asset publishing schedules, and community design blueprints tailored for modern growth metrics.</p>
       </div>
       <div class="service-card">
-        <i class="ti ti-cpu"></i>
-        <h3>AI Agents &amp; Workflows</h3>
-        <p>Configuring autonomous digital systems and modern language models to automate manual community pipeline operations.</p>
+        <i class="ti ti-message-circle"></i>
+        <h3>Community &amp; Storytelling</h3>
+        <p>Turning silent profiles into vibrant consumer spaces by managing direct response pipelines and values-led copy models.</p>
       </div>
       <div class="service-card">
-        <i class="ti ti-api"></i>
-        <h3>API Data Integration</h3>
-        <p>Connecting multi-platform application infrastructures to seamlessly pull live performance analytics and automate distribution logs.</p>
+        <i class="ti ti-chart-bar"></i>
+        <h3>Performance Marketing</h3>
+        <p>Extracting raw performance channel logs and transforming them into optimized campaign systems to guarantee audience acquisition loops.</p>
       </div>
       <div class="service-card">
-        <i class="ti ti-wand"></i>
-        <h3>Interactive UI Development</h3>
-        <p>Developing bespoke animated components and custom CSS swelling layouts that enhance retention through elegant transitions.</p>
+        <i class="ti ti-layers-intersect"></i>
+        <h3>AI &amp; Tech Implementations</h3>
+        <p>Leveraging advanced tools (ChatGPT, Claude, Later, and front-end interface enhancements) as background mechanics to multiply production output speed.</p>
       </div>
     </div>
   </section>
 
-  <!-- RESTRUCTURED PORTFOLIO WORK EXPERIENCE SECTION -->
+  <!-- RESTRUCTURED PORTFOLIO WORK EXPERIENCE SECTION WITH HIGH-CONTRAST CTAS -->
   <section id="work">
     <div class="section-label">Enterprise Value Tracking</div>
     <h2>Proven Strategic Impact</h2>
     <div class="case-container">
       
-      <!-- Project 1: Medserve LUTH Cancer Centre (Data Extracted directly from presentation) -->
+      <!-- Project 1: Medserve LUTH Cancer Centre -->
       <div class="case-card-premium">
         <div class="case-info">
           <span class="case-tag">Healthcare Communications Ecosystem</span>
           <h3>Medserve-LUTH Cancer Centre</h3>
-          <p class="case-desc">Led the end-to-end digital optimization transformation framework. Directed comprehensive awareness initiatives across multiple commemorative tracking blocks and expanded localized discovery reach via streamlined multi-channel organic distribution workflows.</p>
-          <div>
-            <a class="btn-outline" style="padding: 0.8rem 1.8rem; font-size: 0.85rem;" href="#connect">Request Full Report Deck</a>
-          </div>
+          <p class="case-desc">Led the multi-channel digital communications framework. Managed brand visibility across critical healthcare campaigns and scaled platform performance metrics utilizing streamlined distribution channels.</p>
+          <a class="btn-case-cta" href="#connect">View Campaign Report</a>
         </div>
         <div class="case-metrics-panel">
           <div class="metric-box">
@@ -707,9 +708,7 @@
           <span class="case-tag">E-Commerce Pipeline Architecture</span>
           <h3>Ade Gadgets Scaling Systems</h3>
           <p class="case-desc">Engineered targeted organic social funnels on X (formerly Twitter) to maximize inbound leads, catalog click-throughs, and overall commercial customer retention loops.</p>
-          <div>
-            <a class="btn-primary" style="padding: 0.8rem 1.8rem; font-size: 0.85rem;" href="https://x.com/ade_gadgets?s=11" target="_blank">View Live Channel &rarr;</a>
-          </div>
+          <a class="btn-case-cta" href="https://x.com/ade_gadgets?s=11" target="_blank">View Live Channel &rarr;</a>
         </div>
         <div class="case-metrics-panel">
           <div class="metric-box">
@@ -729,9 +728,7 @@
           <span class="case-tag">Lifestyle Community Management</span>
           <h3>TeshMi Highlights Expansion</h3>
           <p class="case-desc">Constructed high-retention content architecture on Instagram, streamlining asset delivery schedules to skyrocket dynamic engagement across community demographics.</p>
-          <div>
-            <a class="btn-primary" style="padding: 0.8rem 1.8rem; font-size: 0.85rem;" href="https://www.instagram.com/tesh_highlight?igsh=MXh4NXh2a2pjMml4Zg==" target="_blank">View Live Feed &rarr;</a>
-          </div>
+          <a class="btn-case-cta" href="https://www.instagram.com/tesh_highlight?igsh=MXh4NXh2a2pjMml4Zg==" target="_blank">View Live Feed &rarr;</a>
         </div>
         <div class="case-metrics-panel">
           <div class="metric-box">
@@ -748,27 +745,26 @@
     </div>
   </section>
 
-  <!-- LANDING SITE FOOTER PORTAL WITH FLOATING AMBIENT AI UNIVERSE ELEMENTS -->
+  <!-- LANDING SITE FOOTER PORTAL WITH GLOWING MIXED TOOL BADGES -->
   <footer id="connect">
     
-    <!-- Non-distracting Minimalist AI Ambient Floating Shadow Indicators -->
+    <!-- Highly Visible, Glowing Mixed Tech & Marketing Tool Dock -->
     <div class="ai-universe">
-      <div class="ai-node node-gemini"><i class="ti ti-sparkles"></i> Gemini Active</div>
-      <div class="ai-node node-claude"><i class="ti ti-brain"></i> Claude 3.5</div>
-      <div class="ai-node node-chatgpt"><i class="ti ti-bolt"></i> GPT-4o</div>
-      <div class="ai-node node-grok"><i class="ti ti-terminal-2"></i> Grok Engine</div>
+      <div class="ai-node node-1"><i class="ti ti-brand-meta"></i> Meta Ads / Insta</div>
+      <div class="ai-node node-2"><i class="ti ti-sparkles"></i> Claude &amp; Gemini</div>
+      <div class="ai-node node-3"><i class="ti ti-brand-tiktok"></i> TikTok Analytics</div>
+      <div class="ai-node node-4"><i class="ti ti-calendar-time"></i> Later / Buffer Stack</div>
     </div>
 
     <div class="footer-content">
       <h2>Let's Scale Together.</h2>
       <p class="footer-lead">Available for specialized high-impact Remote configurations or corporate Hybrid roles within Lagos, West Africa.</p>
       
-      <!-- Secure Root Asset Download Terminal -->
       <div class="download-zone">
         <h3>Verified Career Documentation Vault</h3>
-        <p style="color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.1rem;">Review my formal, data-verified operational background covering web architecture, automations, and channel scaling metrics.</p>
+        <p style="color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.1rem;">Review my formal, data-verified operational background covering campaign strategy, digital community management, and growth frameworks.</p>
         
-        <a class="btn-primary" href="Joshua_Ire_Social_Media_Manager_CV_3.pdf" download="Joshua_Ire_Technical_Resume.pdf" target="_blank">
+        <a class="btn-primary" href="Joshua_Ire_Social_Media_Manager_CV_3.pdf" download="Joshua_Ire_Growth_Resume.pdf" target="_blank">
           <i class="ti ti-download" style="vertical-align: middle; margin-right: 6px;"></i> Download Official Resume / CV
         </a>
       </div>
