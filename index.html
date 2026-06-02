@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Ire | Social Media & Digital Communications Strategist</title>
+  <title>Joshua Ire | Technical Social Media & Digital Automation Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <style>
@@ -13,7 +13,6 @@
       --ink3: #475569;
       --bg: #fdfdfd; 
       --bg2: #f1f5f9;
-      /* Custom Requested Theme Variables */
       --indigo: #312E81;
       --coral: #F43F5E;
       --coral-light: #ffe4e6;
@@ -35,8 +34,10 @@
       background: var(--bg);
       color: var(--ink);
       line-height: 1.65;
+      overflow-x: hidden;
     }
 
+    /* NAVIGATION SYSTEM & HOVER DROPDOWN */
     nav {
       display: flex;
       justify-content: space-between;
@@ -45,12 +46,11 @@
       background: rgba(255, 255, 255, 0.96);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 2000;
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       backdrop-filter: blur(12px);
     }
 
-    /* Fixed: Name Heading is Bold, Large, and Distinctive */
     .nav-logo {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
@@ -63,6 +63,11 @@
       display: flex;
       gap: 2.5rem;
       list-style: none;
+      align-items: center;
+    }
+
+    .nav-links > li {
+      position: relative;
     }
 
     .nav-links a {
@@ -74,16 +79,77 @@
       font-weight: 700;
       transition: all 0.3s ease;
       display: inline-block;
+      padding: 0.5rem 0;
     }
 
     .nav-links a:hover {
       color: var(--coral);
-      transform: translateY(-2px);
     }
 
+    /* Core Nav Dropdown Styling Engine */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      min-width: 290px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      border-radius: 16px;
+      padding: 1.5rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(5px);
+    }
+
+    .dropdown-menu li {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 0.5rem;
+    }
+
+    .dropdown-menu li:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    .dropdown-menu span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .dropdown-menu p, .dropdown-menu a {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+
+    /* DUAL IMAGE HERO SECTION */
     .hero {
       display: grid;
-      grid-template-columns: 1fr 480px;
+      grid-template-columns: 1.1fr 0.9fr;
       min-height: calc(100vh - 80px);
     }
 
@@ -128,7 +194,7 @@
     .hero-sub {
       font-size: 1.25rem;
       color: var(--ink3);
-      max-width: 540px;
+      max-width: 580px;
       margin-bottom: 2.5rem;
     }
 
@@ -138,7 +204,7 @@
       align-items: center;
     }
 
-    /* Interactive "Swelling" Animation UI Buttons */
+    /* Swelling Interactive Custom Buttons */
     .btn-primary {
       display: inline-block;
       background: var(--gradient);
@@ -177,28 +243,47 @@
       box-shadow: 0 15px 30px rgba(49, 46, 129, 0.25);
     }
 
+    /* Side Panel Image Display Dock */
     .hero-right {
       background: var(--gradient);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding: 4rem 2rem;
+      gap: 2.5rem;
+    }
+
+    .hero-photo-container {
+      width: 100%;
+      max-width: 380px;
       position: relative;
-      overflow: hidden;
-      padding: 2rem;
     }
 
     .hero-photo {
       width: 100%;
-      max-width: 400px;
-      height: 520px;
+      height: 440px;
       object-fit: cover;
-      border-radius: 28px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.4);
-      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border-radius: 24px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+      transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .hero-photo:hover {
-      transform: scale(1.05) rotate(1deg);
+      transform: scale(1.05);
+    }
+
+    .hero-photo-sub {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+      transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .hero-photo-sub:hover {
+      transform: scale(1.05);
     }
 
     section {
@@ -223,48 +308,177 @@
       color: var(--ink2);
     }
 
-    .services-grid, .case-grid {
-      display: grid;
-      gap: 2.5rem;
-      margin-top: 3.5rem;
-    }
-
+    /* SERVICES STYLE LAYOUT */
     .services-grid {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: grid;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .case-grid {
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    }
-
-    .service-card, .case-card {
+    .service-card {
       background: var(--bg2);
       border: 1px solid rgba(0,0,0,0.03);
-      border-radius: 24px;
-      padding: 3rem 2.5rem;
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    .service-card h3, .case-card h3 {
+    .service-card i {
+      font-size: 2rem;
+      color: var(--coral);
+      margin-bottom: 1.2rem;
+      display: inline-block;
+    }
+
+    .service-card h3 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.35rem;
       color: var(--ink2);
     }
 
-    .service-card:hover, .case-card:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 40px 70px rgba(49, 46, 129, 0.08);
-      border-color: var(--coral);
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(49, 46, 129, 0.08);
       background: white;
+      border-color: var(--indigo);
     }
 
-    /* Premium Contact Engine Landing Port */
-    footer {
+    /* PREMIUM CASE STUDIES SECTION */
+    .case-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      margin-top: 4rem;
+    }
+
+    .case-card-premium {
+      background: white;
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.02);
+      transition: all 0.5s ease;
+    }
+
+    .case-card-premium:hover {
+      box-shadow: 0 35px 70px rgba(49, 46, 129, 0.08);
+      border-color: var(--coral);
+    }
+
+    .case-info {
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .case-metrics-panel {
       background: #090914;
+      padding: 3.5rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      border-left: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .case-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: var(--coral);
+      margin-bottom: 0.5rem;
+    }
+
+    .case-info h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--ink2);
+      margin-bottom: 1rem;
+    }
+
+    .case-desc {
+      color: var(--ink3);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric-box {
+      border-left: 3px solid var(--coral);
+      padding-left: 1.2rem;
+    }
+
+    .metric-value {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
       color: #94a3b8;
-      padding: 7rem 4rem 4rem 4rem;
+      margin-top: 0.3rem;
+    }
+
+    /* FLOATING AI AMBIENT SHADOW ANIMATIONS */
+    .ai-universe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .ai-node {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255,255,255,0.3);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* Keyframe Translation Loops */
+    @keyframes floatAlpha {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-25px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes floatBeta {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(-4deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    .node-gemini { top: 20%; left: 10%; animation: floatAlpha 6s infinite ease-in-out; }
+    .node-claude { top: 60%; left: 15%; animation: floatBeta 7s infinite ease-in-out; }
+    .node-chatgpt { top: 30%; right: 12%; animation: floatBeta 5s infinite ease-in-out; }
+    .node-grok { top: 75%; right: 18%; animation: floatAlpha 8s infinite ease-in-out; }
+
+    /* FOOTER AREA SETUP */
+    footer {
+      background: #06060f;
+      color: #94a3b8;
+      padding: 8rem 4rem 4rem 4rem;
       text-align: center;
       position: relative;
     }
@@ -282,6 +496,8 @@
     .footer-content {
       max-width: 750px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .footer-content h2 {
@@ -297,12 +513,12 @@
     }
 
     .download-zone {
-      background: #111126;
-      border: 1px solid #1e1e38;
+      background: #0d0d1f;
+      border: 1px solid #1a1a3a;
       border-radius: 32px;
       padding: 3.5rem 2rem;
       margin-bottom: 4rem;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.4);
     }
 
     .download-zone h3 {
@@ -338,123 +554,232 @@
 
     .copyright {
       font-size: 0.9rem;
-      border-top: 1px solid #1e1e32;
+      border-top: 1px solid #131326;
       padding-top: 2.5rem;
-      color: #475569;
+      color: #334155;
     }
 
-    @media (max-width: 968px) {
+    @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; }
-      .hero-right { height: 450px; }
+      .hero-right { flex-direction: row; justify-content: center; padding: 4rem 2rem; }
+      .hero-photo-container { max-width: 45%; }
+      .case-card-premium { grid-template-columns: 1fr; }
+      .case-metrics-panel { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-right { flex-direction: column; }
+      .hero-photo-container { max-width: 100%; }
       .hero-left { padding: 4rem 2rem; }
       nav { padding: 1.2rem 2rem; }
-      h1 { font-size: 3.2rem; }
+      h1 { font-size: 3rem; }
       section { padding: 5rem 2rem; }
       footer { padding: 5rem 2rem 3rem 2rem; }
+      .nav-links { display: none; } /* Mobile optimization fallback */
     }
   </style>
 </head>
 <body>
 
+  <!-- TOP HEADER LOGO & DROPDOWN NAVIGATION LINK -->
   <nav>
     <span class="nav-logo">Joshua Ire</span>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#work">Work</a></li>
-      <li><a href="#connect">Contact &amp; CV</a></li>
+      
+      <!-- Interactive CSS Hover Dropdown Menu System -->
+      <li class="dropdown">
+        <a href="#connect" class="dropdown-trigger">Contact &amp; CV <i class="ti ti-chevron-down" style="font-size: 0.8rem; vertical-align: middle;"></i></a>
+        <ul class="dropdown-menu">
+          <li>
+            <span>Direct Phone</span>
+            <p>+234 8133902505</p>
+          </li>
+          <li>
+            <span>Work Placement</span>
+            <p>Lagos, West Africa / Remote</p>
+          </li>
+          <li>
+            <span>Inquiries</span>
+            <a href="mailto:joshire321@gmail.com">joshire321@gmail.com</a>
+          </li>
+          <li>
+            <span>Network Link</span>
+            <a href="https://www.linkedin.com/in/joshire-321x" target="_blank" style="color: var(--coral); font-weight: 700;">Visit LinkedIn Profile &rarr;</a>
+          </li>
+        </ul>
+      </li>
     </ul>
-    <!-- This now acts as a smooth anchor directly down to your footer landing page -->
     <a class="btn-primary" href="#connect">Hire Me</a>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO PANEL: MULTI-IMAGE INTEGRATED ENGINE -->
   <div class="hero">
     <div class="hero-left">
-      <div class="hero-badge">Available for Opportunities • Lagos</div>
-      <h1>Social Media That <span>Drives Revenue</span></h1>
-      <p class="hero-sub">I help brands grow through data-driven strategy, high-converting content, and AI-powered community management across Instagram, TikTok, X &amp; LinkedIn.</p>
+      <!-- Clear Placement Value Statement Metrics -->
+      <div class="hero-badge"><i class="ti ti-circle-filled" style="font-size: 0.6rem; animation: pulse 2s infinite;"></i> Open to Remote &amp; Hybrid Opportunities</div>
+      <h1>Engineering High-Impact <span>Digital Growth</span></h1>
+      
+      <!-- Premium Text Focus Architecture Update -->
+      <p class="hero-sub">I specialize in high-converting website design, deploying automated AI tool agents, API workflows, and crafting immersive interactive user experiences that convert attention into direct brand revenue.</p>
+      
       <div class="hero-actions">
-        <a class="btn-primary" href="#work">View Case Studies</a>
+        <a class="btn-primary" href="#work">Explore Case Studies</a>
         <a class="btn-outline" href="#connect">Get My CV</a>
       </div>
     </div>
+    
+    <!-- Professional Structural Dual-Image Stack Enclosure -->
     <div class="hero-right">
-      <!-- Fixed the direct link location structure to make your live image show properly -->
-      <img src="joshua-ire.jpg" alt="Joshua Ire" class="hero-photo" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/joshua-ire.jpg'">
+      <div class="hero-photo-container">
+        <img src="joshua-ire.jpg" alt="Joshua Ire Portrait" class="hero-photo" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/joshua-ire.jpg'">
+      </div>
+      <div class="hero-photo-container">
+        <img src="image_e1df60.png" alt="Joshua Ire In Session" class="hero-photo-sub" onerror="this.src='https://raw.githubusercontent.com/irejosh/joshire.github.io/main/image_e1df60.png'">
+      </div>
     </div>
   </div>
 
-  <!-- SERVICES SECTION -->
+  <!-- EXPANDED TECHNICAL SKILLS SECTION -->
   <section id="services">
-    <div class="section-label">What I Do</div>
-    <h2>Full-Funnel Social Media Management</h2>
+    <div class="section-label">Core Competencies</div>
+    <h2>Advanced Technical Capabilities</h2>
     <div class="services-grid">
       <div class="service-card">
-        <h3>Strategy &amp; Audits</h3>
-        <p>Comprehensive ecosystem evaluations and growth models designed around modern performance indicators.</p>
+        <i class="ti ti-browser"></i>
+        <h3>Website Design &amp; Architecture</h3>
+        <p>Building lightning-fast, premium user-centric layouts optimized for absolute scannability and cross-device conversion funnels.</p>
       </div>
       <div class="service-card">
-        <h3>Content Architecture</h3>
-        <p>High-converting asset creation and technical campaigns custom-built for high retention across video and text channels.</p>
+        <i class="ti ti-cpu"></i>
+        <h3>AI Agents &amp; Workflows</h3>
+        <p>Configuring autonomous digital systems and modern language models to automate manual community pipeline operations.</p>
       </div>
       <div class="service-card">
-        <h3>Paid Social Frameworks</h3>
-        <p>Optimized customer acquisition setups and conversion architecture focused on scaling pipeline ROI.</p>
+        <i class="ti ti-api"></i>
+        <h3>API Data Integration</h3>
+        <p>Connecting multi-platform application infrastructures to seamlessly pull live performance analytics and automate distribution logs.</p>
       </div>
       <div class="service-card">
-        <h3>Community Operations</h3>
-        <p>Active multi-platform audience management and engagement systems designed to support user retention.</p>
-      </div>
-      <div class="service-card">
-        <h3>AI Integration Workflows</h3>
-        <p>Deploying advanced automation loops to refine content assembly pipelines and analytical sorting speeds.</p>
-      </div>
-      <div class="service-card">
-        <h3>Intelligence &amp; Analytics</h3>
-        <p>Transforming complex multi-node database metrics into clear, actionable executive performance logs.</p>
+        <i class="ti ti-wand"></i>
+        <h3>Interactive UI Development</h3>
+        <p>Developing bespoke animated components and custom CSS swelling layouts that enhance retention through elegant transitions.</p>
       </div>
     </div>
   </section>
 
-  <!-- SELECTED WORK SECTION -->
+  <!-- RESTRUCTURED PORTFOLIO WORK EXPERIENCE SECTION -->
   <section id="work">
-    <div class="section-label">Selected Work</div>
-    <h2>Real Results. Real Clients.</h2>
-    <div class="case-grid">
-      <div class="case-card">
-        <h3>Bridal Makeup Artist Framework</h3>
-        <p>Engineered organic channel funnels to acquire targeted interactions, scaling localized brand visibility to over 2.6K community members.</p>
+    <div class="section-label">Enterprise Value Tracking</div>
+    <h2>Proven Strategic Impact</h2>
+    <div class="case-container">
+      
+      <!-- Project 1: Medserve LUTH Cancer Centre (Data Extracted directly from presentation) -->
+      <div class="case-card-premium">
+        <div class="case-info">
+          <span class="case-tag">Healthcare Communications Ecosystem</span>
+          <h3>Medserve-LUTH Cancer Centre</h3>
+          <p class="case-desc">Led the end-to-end digital optimization transformation framework. Directed comprehensive awareness initiatives across multiple commemorative tracking blocks and expanded localized discovery reach via streamlined multi-channel organic distribution workflows.</p>
+          <div>
+            <a class="btn-outline" style="padding: 0.8rem 1.8rem; font-size: 0.85rem;" href="#connect">Request Full Report Deck</a>
+          </div>
+        </div>
+        <div class="case-metrics-panel">
+          <div class="metric-box">
+            <div class="metric-value">28.6K</div>
+            <div class="metric-label">Facebook Profile Views Sparked</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">131.6K</div>
+            <div class="metric-label">YouTube Video Content Impressions</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">+57.6%</div>
+            <div class="metric-label">LinkedIn Organic Engagement Jump</div>
+          </div>
+        </div>
       </div>
-      <div class="case-card">
-        <h3>Ade's Gadgets Direct Sales Systems</h3>
-        <p>Constructed transaction acquisition funnels and direct digital messaging pipelines across X (formerly Twitter).</p>
+
+      <!-- Project 2: Ade Gadgets -->
+      <div class="case-card-premium">
+        <div class="case-info">
+          <span class="case-tag">E-Commerce Pipeline Architecture</span>
+          <h3>Ade Gadgets Scaling Systems</h3>
+          <p class="case-desc">Engineered targeted organic social funnels on X (formerly Twitter) to maximize inbound leads, catalog click-throughs, and overall commercial customer retention loops.</p>
+          <div>
+            <a class="btn-primary" style="padding: 0.8rem 1.8rem; font-size: 0.85rem;" href="https://x.com/ade_gadgets?s=11" target="_blank">View Live Channel &rarr;</a>
+          </div>
+        </div>
+        <div class="case-metrics-panel">
+          <div class="metric-box">
+            <div class="metric-value">Organic</div>
+            <div class="metric-label">Lead Gen &amp; Sales Conversion Optimization</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">1.1K+</div>
+            <div class="metric-label">Platform Growth Interaction Touchpoints</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Project 3: TeshMi Highlights -->
+      <div class="case-card-premium">
+        <div class="case-info">
+          <span class="case-tag">Lifestyle Community Management</span>
+          <h3>TeshMi Highlights Expansion</h3>
+          <p class="case-desc">Constructed high-retention content architecture on Instagram, streamlining asset delivery schedules to skyrocket dynamic engagement across community demographics.</p>
+          <div>
+            <a class="btn-primary" style="padding: 0.8rem 1.8rem; font-size: 0.85rem;" href="https://www.instagram.com/tesh_highlight?igsh=MXh4NXh2a2pjMml4Zg==" target="_blank">View Live Feed &rarr;</a>
+          </div>
+        </div>
+        <div class="case-metrics-panel">
+          <div class="metric-box">
+            <div class="metric-value">High</div>
+            <div class="metric-label">Retention Video Audience Penetration</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-value">Active</div>
+            <div class="metric-label">Community Response Integration Loop</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- LANDING FOOTER INTERFACE WITH RESUME DOCK -->
+  <!-- LANDING SITE FOOTER PORTAL WITH FLOATING AMBIENT AI UNIVERSE ELEMENTS -->
   <footer id="connect">
+    
+    <!-- Non-distracting Minimalist AI Ambient Floating Shadow Indicators -->
+    <div class="ai-universe">
+      <div class="ai-node node-gemini"><i class="ti ti-sparkles"></i> Gemini Active</div>
+      <div class="ai-node node-claude"><i class="ti ti-brain"></i> Claude 3.5</div>
+      <div class="ai-node node-chatgpt"><i class="ti ti-bolt"></i> GPT-4o</div>
+      <div class="ai-node node-grok"><i class="ti ti-terminal-2"></i> Grok Engine</div>
+    </div>
+
     <div class="footer-content">
-      <h2>Let's Build Together.</h2>
-      <p class="footer-lead">Ready to deploy targeted platform systems, data-driven frameworks, and modern creative workflows to advance your digital reach?</p>
+      <h2>Let's Scale Together.</h2>
+      <p class="footer-lead">Available for specialized high-impact Remote configurations or corporate Hybrid roles within Lagos, West Africa.</p>
       
-      <!-- Safe Resume Vault Area -->
+      <!-- Secure Root Asset Download Terminal -->
       <div class="download-zone">
-        <h3>Executive Documentation</h3>
-        <p style="color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.1rem;">Review my detailed structural experience managing social platforms, handling digital pipelines, and refining support frameworks.</p>
+        <h3>Verified Career Documentation Vault</h3>
+        <p style="color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.1rem;">Review my formal, data-verified operational background covering web architecture, automations, and channel scaling metrics.</p>
         
-        <!-- Directly triggers the download of your uploaded file inside the repository root folder -->
-        <a class="btn-primary" href="Joshua_Ire_Social_Media_Manager_CV_2.pdf" download="Joshua_Ire_Resume.pdf" target="_blank">
-          <i class="ti ti-download" style="vertical-align: middle; margin-right: 6px;"></i> Download My CV / Resume
+        <a class="btn-primary" href="Joshua_Ire_Social_Media_Manager_CV_3.pdf" download="Joshua_Ire_Technical_Resume.pdf" target="_blank">
+          <i class="ti ti-download" style="vertical-align: middle; margin-right: 6px;"></i> Download Official Resume / CV
         </a>
       </div>
 
       <div class="footer-links">
         <a href="mailto:joshire321@gmail.com"><i class="ti ti-mail"></i> joshire321@gmail.com</a>
-        <a href="https://www.linkedin.com/in/joshire-321x" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn Profile</a>
+        <a href="tel:+2348133902505"><i class="ti ti-phone"></i> +234 8133902505</a>
+        <a href="https://www.linkedin.com/in/joshire-321x" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn System</a>
       </div>
 
-      <p class="copyright">&copy; 2026 Joshua Ire. All rights reserved. Managed with secure, optimized repository protocols.</p>
+      <p class="copyright">&copy; 2026 Joshua Ire. All rights reserved. Powered by optimized automated web architecture protocols.</p>
     </div>
   </footer>
 
