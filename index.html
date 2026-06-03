@@ -3,41 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Ire | Social Media &amp; Digital Growth Strategist</title>
+
+  <!-- PRIMARY META -->
+  <title>Joshua Ire — Social Media Manager &amp; Digital Growth Strategist</title>
+  <meta name="description" content="Joshua Ire is a Social Media Manager and Digital Growth Strategist in Lagos, Nigeria. Organic content strategy, community management, campaign analytics, and measurable audience growth for brands worldwide. Open to remote and hybrid roles.">
+  <meta name="author" content="Joshua Ire">
+  <meta name="keywords" content="Social Media Manager, Social Media Strategist, Community Manager, Digital Growth Specialist, Content Strategy, Audience Growth, Campaign Analytics, Brand Communication, Lagos, Remote">
+  <meta name="theme-color" content="#312E81">
+  <link rel="canonical" href="https://joshire-321x.github.io/">
+
+  <!-- OPEN GRAPH / SOCIAL -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joshua Ire — Social Media Manager &amp; Digital Growth Strategist">
+  <meta property="og:description" content="Organic content strategy, community management, and analytics-led campaigns that turn social visibility into measurable business growth.">
+  <meta property="og:image" content="joshua-ire.jpeg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Joshua Ire — Social Media Manager &amp; Digital Growth Strategist">
+  <meta name="twitter:description" content="Organic content strategy, community management, and analytics-led campaigns that drive measurable growth.">
+  <meta name="twitter:image" content="joshua-ire.jpeg">
+
+  <!-- FAVICON (replace favicon.svg / favicon.ico with your own asset) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joshua Ire",
+    "jobTitle": "Social Media Manager & Digital Growth Strategist",
+    "email": "mailto:joshire321@gmail.com",
+    "telephone": "+2348133902505",
+    "url": "https://joshire-321x.github.io/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+    "sameAs": ["https://www.linkedin.com/in/joshire-321x"],
+    "knowsAbout": ["Social Media Management","Community Management","Content Strategy","Audience Growth","Campaign Analytics","Brand Communication","Digital Marketing"]
+  }
+  </script>
+
   <style>
     :root {
-      --ink: #0d0c1d; 
-      --ink2: #1e1b4b; 
+      --ink: #0d0c1d;
+      --ink2: #1e1b4b;
       --ink3: #475569;
-      --bg: #fdfdfd; 
+      --bg: #fdfdfd;
       --bg2: #f1f5f9;
       --indigo: #312E81;
-      --coral: #F43F5E;
+      --coral: #E11D48;            /* darkened from #F43F5E for AA contrast on light bg */
       --coral-light: #ffe4e6;
-      --gradient: linear-gradient(135deg, #312E81 0%, #1e1b4b 45%, #F43F5E 100%);
+      --gradient: linear-gradient(135deg, #312E81 0%, #1e1b4b 45%, #E11D48 100%);
+      --shadow-sm: 0 10px 25px rgba(49, 46, 129, 0.10);
+      --shadow-lg: 0 30px 60px rgba(49, 46, 129, 0.14);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'DM Sans', system-ui, sans-serif;
       background: var(--bg);
       color: var(--ink);
       line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* NAVIGATION SYSTEM */
+    a { color: inherit; }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--indigo);
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 0 0 10px 0;
+      z-index: 5000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .skip-link:focus { left: 0; }
+
+    :focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: space-between;
@@ -57,6 +120,7 @@
       font-size: 1.75rem;
       color: var(--indigo);
       letter-spacing: -0.03em;
+      text-decoration: none;
     }
 
     .nav-links {
@@ -66,11 +130,9 @@
       align-items: center;
     }
 
-    .nav-links > li {
-      position: relative;
-    }
+    .nav-links > li { position: relative; }
 
-    .nav-links a {
+    .nav-links a, .dropdown-trigger {
       font-size: 0.9rem;
       color: var(--ink3);
       text-decoration: none;
@@ -78,17 +140,22 @@
       letter-spacing: 0.08em;
       font-weight: 700;
       padding: 0.5rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
-    .nav-links a:hover {
-      color: var(--coral);
-    }
+    .nav-links a:hover, .dropdown-trigger:hover { color: var(--coral); }
 
     .dropdown-menu {
       position: absolute;
       top: 100%;
       right: 0;
-      background: white;
+      background: #fff;
       min-width: 290px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.12);
       border-radius: 16px;
@@ -100,11 +167,13 @@
       opacity: 0;
       visibility: hidden;
       transform: translateY(15px);
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
       border: 1px solid rgba(0,0,0,0.05);
     }
 
-    .dropdown:hover .dropdown-menu {
+    .dropdown:hover .dropdown-menu,
+    .dropdown-menu:focus-within,
+    .dropdown.is-open .dropdown-menu {
       opacity: 1;
       visibility: visible;
       transform: translateY(5px);
@@ -116,16 +185,12 @@
       border-bottom: 1px solid #f1f5f9;
       padding-bottom: 0.5rem;
     }
-
-    .dropdown-menu li:last-child {
-      border: none;
-      padding-bottom: 0;
-    }
+    .dropdown-menu li:last-child { border: none; padding-bottom: 0; }
 
     .dropdown-menu span {
       font-size: 0.75rem;
       text-transform: uppercase;
-      color: #94a3b8;
+      color: #64748b;
       font-weight: 700;
       letter-spacing: 0.05em;
     }
@@ -137,9 +202,22 @@
       letter-spacing: normal;
       font-weight: 500;
       margin-top: 0.2rem;
+      text-decoration: none;
+    }
+    .dropdown-link { color: var(--coral) !important; font-weight: 700 !important; }
+
+    /* HAMBURGER (mobile) */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: var(--indigo);
+      padding: 0.3rem;
     }
 
-    /* DUAL IMAGE HERO SECTION */
+    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -170,7 +248,7 @@
 
     h1 {
       font-family: 'Syne', sans-serif;
-      font-size: 4rem;
+      font-size: clamp(2.6rem, 6vw, 4rem);
       font-weight: 800;
       line-height: 1.12;
       letter-spacing: -0.04em;
@@ -181,11 +259,13 @@
     h1 span {
       background: var(--gradient);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: var(--coral); /* fallback */
     }
 
     .hero-sub {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--ink3);
       max-width: 580px;
       margin-bottom: 2.5rem;
@@ -193,48 +273,50 @@
 
     .hero-actions {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .btn-primary {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
       background: var(--gradient);
-      color: white;
-      padding: 1.1rem 2.4rem;
+      color: #fff;
+      padding: 1.05rem 2.3rem;
       border-radius: 50px;
       font-weight: 700;
       text-decoration: none;
-      text-align: center;
       border: none;
-      box-shadow: 0 10px 25px rgba(49, 46, 129, 0.2);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.35s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.35s ease;
     }
-
-    .btn-primary:hover {
-      transform: scale(1.08) translateY(-4px);
-      box-shadow: 0 20px 40px rgba(244, 63, 94, 0.4);
+    .btn-primary:hover, .btn-primary:focus-visible {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 20px 40px rgba(225, 29, 72, 0.35);
     }
 
     .btn-outline {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
       border: 2px solid var(--indigo);
       color: var(--indigo);
-      padding: 1.1rem 2.4rem;
+      padding: 1.05rem 2.3rem;
       border-radius: 50px;
       font-weight: 700;
       text-decoration: none;
-      text-align: center;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.35s cubic-bezier(0.175,0.885,0.32,1.275), background 0.3s ease, color 0.3s ease;
     }
-
-    .btn-outline:hover {
+    .btn-outline:hover, .btn-outline:focus-visible {
       background: var(--indigo);
-      color: white;
-      transform: scale(1.08) translateY(-4px);
+      color: #fff;
+      transform: translateY(-4px) scale(1.04);
     }
 
-    /* Fixed Image Column Structure Container */
     .hero-right {
       background: var(--gradient);
       display: flex;
@@ -270,15 +352,11 @@
       object-fit: cover;
       transition: transform 0.5s ease;
     }
-
     .hero-photo-wrapper:hover .hero-photo,
-    .hero-photo-wrapper-sub:hover .hero-photo-sub {
-      transform: scale(1.06);
-    }
+    .hero-photo-wrapper-sub:hover .hero-photo-sub { transform: scale(1.06); }
 
-    section {
-      padding: 7rem 4rem;
-    }
+    /* SECTIONS */
+    section { padding: 7rem 4rem; }
 
     .section-label {
       font-size: 0.85rem;
@@ -291,7 +369,7 @@
 
     h2 {
       font-family: 'Syne', sans-serif;
-      font-size: 3rem;
+      font-size: clamp(2rem, 4.5vw, 3rem);
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 1.5rem;
@@ -302,7 +380,7 @@
       display: grid;
       gap: 2rem;
       margin-top: 3.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
     .service-card {
@@ -310,7 +388,7 @@
       border: 1px solid rgba(0,0,0,0.03);
       border-radius: 20px;
       padding: 2.5rem 2rem;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
     }
 
     .service-card i {
@@ -324,22 +402,24 @@
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       margin-bottom: 0.8rem;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       color: var(--ink2);
     }
 
+    .service-card p { color: var(--ink3); }
+
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 30px 60px rgba(49, 46, 129, 0.08);
-      background: white;
+      box-shadow: var(--shadow-lg);
+      background: #fff;
       border-color: var(--indigo);
     }
 
-    /* PREMIUM CASE STUDIES SECTION */
+    /* CASE STUDIES */
     .case-container {
       display: flex;
       flex-direction: column;
-      gap: 3.5rem;
+      gap: 3rem;
       margin-top: 4rem;
     }
 
@@ -351,13 +431,12 @@
       grid-template-columns: 1.2fr 0.8fr;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-      transition: all 0.4s ease;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
     }
-
     .case-card-premium:hover {
-      box-shadow: 0 30px 60px rgba(49, 46, 129, 0.12);
+      box-shadow: var(--shadow-lg);
       border-color: var(--indigo);
-      background: white;
+      background: #fff;
     }
 
     .case-info {
@@ -370,11 +449,11 @@
     .case-metrics-panel {
       background: #090914;
       padding: 3.5rem;
-      color: white;
+      color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.8rem;
       border-left: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -385,11 +464,12 @@
       letter-spacing: 0.15em;
       color: var(--coral);
       margin-bottom: 0.5rem;
+      display: block;
     }
 
     .case-info h3 {
       font-family: 'Syne', sans-serif;
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: 800;
       color: var(--ink2);
       margin-bottom: 1rem;
@@ -397,61 +477,63 @@
 
     .case-desc {
       color: var(--ink3);
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       margin-bottom: 2.5rem;
     }
 
-    /* HIGH CONTRAST BUTTON STYLING FIXES */
     .btn-case-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 0.4rem;
       background: var(--gradient);
-      color: #ffffff !important;
-      padding: 1.1rem 2.2rem;
+      color: #fff;
+      padding: 1rem 2.1rem;
       border-radius: 50px;
       font-weight: 700;
       text-decoration: none;
       font-size: 1rem;
       letter-spacing: 0.02em;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       width: fit-content;
-      box-shadow: 0 8px 20px rgba(244, 63, 94, 0.3);
+      box-shadow: 0 8px 20px rgba(225, 29, 72, 0.3);
       border: 2px solid transparent;
     }
-
-    .btn-case-cta:hover {
+    .btn-case-cta:hover, .btn-case-cta:focus-visible {
       transform: translateY(-3px);
       box-shadow: 0 15px 30px rgba(49, 46, 129, 0.4);
-      border-color: #ffffff;
+      border-color: #fff;
     }
 
-    .metric-box {
-      border-left: 4px solid var(--coral);
-      padding-left: 1.2rem;
-    }
-
+    .metric-box { border-left: 4px solid var(--coral); padding-left: 1.2rem; }
     .metric-value {
       font-family: 'Syne', sans-serif;
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       font-weight: 800;
-      color: white;
+      color: #fff;
       line-height: 1;
     }
+    .metric-label { font-size: 0.85rem; color: #cbd5e1; margin-top: 0.3rem; }
 
-    .metric-label {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      margin-top: 0.3rem;
+    /* FOOTER */
+    footer {
+      background: #06060f;
+      color: #cbd5e1;
+      padding: 8rem 4rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: var(--gradient);
     }
 
-    /* GLOWING MIXED TOOL AMBIENT DOCK */
     .ai-universe {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       pointer-events: none;
       overflow: hidden;
       z-index: 1;
@@ -460,7 +542,7 @@
     .ai-node {
       position: absolute;
       background: #111126;
-      border: 1px solid rgba(244, 63, 94, 0.5);
+      border: 1px solid rgba(225, 29, 72, 0.5);
       color: #f1f5f9;
       padding: 0.7rem 1.4rem;
       border-radius: 50px;
@@ -469,61 +551,25 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      box-shadow: 0 0 25px rgba(244, 63, 94, 0.35);
+      box-shadow: 0 0 25px rgba(225, 29, 72, 0.35);
     }
 
     @keyframes floatAlpha {
-      0% { transform: translateY(0px) rotate(0deg); }
+      0%,100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-25px) rotate(3deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
     }
     @keyframes floatBeta {
-      0% { transform: translateY(0px) rotate(0deg); }
+      0%,100% { transform: translateY(0) rotate(0deg); }
       50% { transform: translateY(-15px) rotate(-4deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
     }
-
-    .node-1 { top: 15%; left: 8%; animation: floatAlpha 6s infinite ease-in-out; }
+    .node-1 { top: 15%; left: 8%;  animation: floatAlpha 6s infinite ease-in-out; }
     .node-2 { top: 55%; left: 12%; animation: floatBeta 7s infinite ease-in-out; }
     .node-3 { top: 25%; right: 10%; animation: floatBeta 5s infinite ease-in-out; }
     .node-4 { top: 70%; right: 15%; animation: floatAlpha 8s infinite ease-in-out; }
 
-    footer {
-      background: #06060f;
-      color: #94a3b8;
-      padding: 8rem 4rem 4rem 4rem;
-      text-align: center;
-      position: relative;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: var(--gradient);
-    }
-
-    .footer-content {
-      max-width: 750px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .footer-content h2 {
-      color: white;
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-lead {
-      font-size: 1.25rem;
-      margin-bottom: 3.5rem;
-      color: #cbd5e1;
-    }
+    .footer-content { max-width: 750px; margin: 0 auto; position: relative; z-index: 2; }
+    .footer-content h2 { color: #fff; font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+    .footer-lead { font-size: 1.2rem; margin-bottom: 3.5rem; color: #cbd5e1; }
 
     .download-zone {
       background: #0d0d1f;
@@ -533,14 +579,14 @@
       margin-bottom: 4rem;
       box-shadow: 0 25px 60px rgba(0,0,0,0.4);
     }
-
     .download-zone h3 {
-      color: white;
+      color: #fff;
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       margin-bottom: 1.2rem;
-      font-size: 1.75rem;
+      font-size: 1.7rem;
     }
+    .download-zone p { color: #cbd5e1; margin-bottom: 2.5rem; font-size: 1.05rem; }
 
     .footer-links {
       display: flex;
@@ -549,188 +595,351 @@
       margin-bottom: 4rem;
       flex-wrap: wrap;
     }
-
     .footer-links a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 500;
       transition: color 0.3s;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
-    .footer-links a:hover {
-      color: var(--coral);
-    }
+    .footer-links a:hover { color: var(--coral); }
 
     .copyright {
       font-size: 0.9rem;
       border-top: 1px solid #131326;
       padding-top: 2.5rem;
-      color: #334155;
+      color: #64748b;
     }
 
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: 0.1s; }
+    .reveal[data-delay="2"] { transition-delay: 0.2s; }
+    .reveal[data-delay="3"] { transition-delay: 0.3s; }
+
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; }
-      .hero-right { flex-direction: row; justify-content: center; padding: 4rem 2rem; }
+      .hero-right { flex-direction: row; justify-content: center; padding: 4rem 2rem; flex-wrap: wrap; }
       .case-card-premium { grid-template-columns: 1fr; }
       .case-metrics-panel { border-left: none; border-top: 1px solid rgba(255,255,255,0.05); }
     }
 
     @media (max-width: 768px) {
+      nav { padding: 1.1rem 1.5rem; }
+      .nav-toggle { display: block; }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        display: none;
+      }
+      .nav-links.is-open { display: flex; }
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0.5rem 0 0;
+        min-width: 0;
+      }
+      nav > .btn-primary { display: none; }
       .hero-right { flex-direction: column; }
-      .hero-left { padding: 4rem 2rem; }
-      nav { padding: 1.2rem 2rem; }
-      h1 { font-size: 3rem; }
-      section { padding: 5rem 2rem; }
-      footer { padding: 5rem 2rem 3rem 2rem; }
-      .nav-links { display: none; }
+      .hero-left { padding: 4rem 1.5rem; }
+      section { padding: 5rem 1.5rem; }
+      .case-info, .case-metrics-panel { padding: 2.5rem 1.8rem; }
+      footer { padding: 5rem 1.5rem 3rem; }
+      .footer-links { gap: 1.5rem; }
+      .ai-node { display: none; } /* avoid clutter / overlap on small screens */
+    }
+
+    /* MOTION SENSITIVITY */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <span class="nav-logo">Joshua Ire</span>
-    <ul class="nav-links">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav aria-label="Primary">
+    <a class="nav-logo" href="#main">Joshua Ire</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="#services">Strategy</a></li>
       <li><a href="#work">Case Studies</a></li>
-      
       <li class="dropdown">
-        <a href="#connect" class="dropdown-trigger">Contact &amp; CV <i class="ti ti-chevron-down" style="font-size: 0.8rem; vertical-align: middle;"></i></a>
-        <ul class="dropdown-menu">
+        <button class="dropdown-trigger" id="contactTrigger" aria-expanded="false" aria-controls="contactMenu">
+          Contact &amp; CV <i class="ti ti-chevron-down" aria-hidden="true" style="font-size:0.8rem;"></i>
+        </button>
+        <ul class="dropdown-menu" id="contactMenu" aria-labelledby="contactTrigger">
           <li>
             <span>Direct Phone</span>
-            <p>+234 8133902505</p>
+            <a href="tel:+2348133902505">+234 813 390 2505</a>
           </li>
           <li>
-            <span>Work Placement</span>
-            <p>Lagos, West Africa / Remote</p>
+            <span>Availability</span>
+            <p>Lagos, Nigeria · Remote &amp; Hybrid</p>
           </li>
           <li>
             <span>Inquiries</span>
             <a href="mailto:joshire321@gmail.com">joshire321@gmail.com</a>
           </li>
           <li>
-            <span>Network Link</span>
-            <a href="https://www.linkedin.com/in/joshire-321x" target="_blank" style="color: var(--coral); font-weight: 700;">Visit LinkedIn Profile &rarr;</a>
+            <span>Network</span>
+            <a class="dropdown-link" href="https://www.linkedin.com/in/joshire-321x" target="_blank" rel="noopener noreferrer">Visit LinkedIn Profile &rarr;</a>
           </li>
         </ul>
       </li>
     </ul>
+
     <a class="btn-primary" href="#connect">Hire Me</a>
   </nav>
 
-  <!-- SOCIAL IDENTITY MARKETING HERO DOCK -->
-  <div class="hero">
-    <div class="hero-left">
-      <div class="hero-badge"><i class="ti ti-circle-filled" style="font-size: 0.6rem;"></i> Open to Remote &amp; Hybrid Roles</div>
-      <h1>Social Media Management That <span>Scales Brands</span></h1>
-      
-      <p class="hero-sub">I build high-impact organic content strategies, manage community engagement funnels, and design target audience campaigns that convert visibility into direct business growth. Backed by workflows in modern AI orchestration tools, automated workflows, and front-end interface adjustments to maximize lead conversions.</p>
-      
-      <div class="hero-actions">
-        <a class="btn-primary" href="#work">Explore Case Studies</a>
-        <a class="btn-outline" href="#connect">Get My CV</a>
-      </div>
-    </div>
-    
-    <!-- Image Fix: Updated with strict file extension mappings (.jpeg) -->
-    <div class="hero-right">
-      <div class="hero-photo-wrapper">
-        <img src="joshua-ire.jpeg" alt="Joshua Ire Portrait" class="hero-photo">
-      </div>
-      <div class="hero-photo-wrapper-sub">
-        <img src="image_e1df60.jpeg" alt="Joshua Ire Content Session" class="hero-photo-sub">
-      </div>
-    </div>
-  </div>
+  <main id="main">
 
-  <!-- STRATEGY / SERVICES SECTION -->
-  <section id="services">
-    <div class="section-label">Expertise Blueprint</div>
-    <h2>Social First Frameworks</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="ti ti-speakerphone"></i>
-        <h3>Social Media Management</h3>
-        <p>End-to-end management, multi-channel asset publishing schedules, and community design blueprints tailored for modern growth metrics.</p>
-      </div>
-      <div class="service-card">
-        <i class="ti ti-message-circle"></i>
-        <h3>Community &amp; Storytelling</h3>
-        <p>Turning silent profiles into vibrant consumer spaces by managing direct response pipelines and values-led copy models.</p>
-      </div>
-      <div class="service-card">
-        <i class="ti ti-cpu"></i>
-        <h3>AI &amp; Automation Workflows</h3>
-        <p>Scaling output and lead-capturing via systematic orchestration, smart content processing docks, and conversion-optimized front-ends.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES SECTION -->
-  <section id="work" style="background: #fafafa; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
-    <div class="section-label">Proven Results</div>
-    <h2>Growth Case Studies</h2>
-    
-    <div class="case-container">
-      <!-- Premium Case Card 1 -->
-      <div class="case-card-premium">
-        <div class="case-info">
-          <div class="case-tag">Organic Scaling</div>
-          <h3>Brand Authority Overhaul</h3>
-          <p class="case-desc">Designed a highly shareable content ecosystem and narrative-driven campaign structure to lift consumer retention and inbound leads without ad spend.</p>
-          <a href="#connect" class="btn-case-cta">Read Deep Dive</a>
-        </div>
-        <div class="case-metrics-panel">
-          <div class="metric-box">
-            <div class="metric-value">+145%</div>
-            <div class="metric-label">Inbound Lead Velocity</div>
-          </div>
-          <div class="metric-box">
-            <div class="metric-value">3.2M</div>
-            <div class="metric-label">Organic Impressions</div>
-          </div>
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction" style="padding:0;">
+      <div class="hero-left">
+        <span class="hero-badge"><i class="ti ti-circle-filled" aria-hidden="true" style="font-size:0.6rem;"></i> Open to Remote &amp; Hybrid Roles</span>
+        <h1>Social Media Management That <span>Scales Brands</span></h1>
+        <p class="hero-sub">I build organic content strategies, manage community engagement, and run analytics-led campaigns that turn social visibility into measurable business growth. I work fluently with modern AI and scheduling tools to ship more, faster, without losing quality.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#work">Explore Case Studies</a>
+          <a class="btn-outline" href="#connect">Get My CV</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CONNECT & FOOTER ZONE -->
-  <footer id="connect">
-    <!-- Floating AI Dock Ambient Background element -->
-    <div class="ai-universe">
-      <div class="ai-node node-1"><i class="ti ti-brand-instagram"></i> Instaflow</div>
-      <div class="ai-node node-2"><i class="ti ti-automation"></i> Workflows</div>
-      <div class="ai-node node-3"><i class="ti ti-terminal-2"></i> Frontend</div>
-      <div class="ai-node node-4"><i class="ti ti-chart-arrows"></i> Analytics</div>
+      <!-- NOTE: rename "image_e1df60.jpeg" to a real filename and update src + alt below -->
+      <div class="hero-right">
+        <div class="hero-photo-wrapper">
+          <img src="joshua-ire.jpeg" alt="Portrait of Joshua Ire, Social Media Manager" class="hero-photo" width="340" height="340" loading="eager">
+        </div>
+        <div class="hero-photo-wrapper-sub">
+          <img src="image_e1df60.jpeg" alt="Joshua Ire reviewing social media campaign analytics" class="hero-photo-sub" width="360" height="225" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+      <p class="section-label reveal">What I Do</p>
+      <h2 id="services-title" class="reveal" data-delay="1">Social-First Growth Frameworks</h2>
+      <div class="services-grid">
+        <article class="service-card reveal" data-delay="1">
+          <i class="ti ti-speakerphone" aria-hidden="true"></i>
+          <h3>Social Media Management</h3>
+          <p>End-to-end management across platforms: content calendars, scheduling, publishing, and community workflows built around clear growth metrics.</p>
+        </article>
+        <article class="service-card reveal" data-delay="2">
+          <i class="ti ti-message-circle" aria-hidden="true"></i>
+          <h3>Community &amp; Storytelling</h3>
+          <p>Turning passive followers into active communities through consistent engagement, responsive DMs and comments, and brand-aligned copy.</p>
+        </article>
+        <article class="service-card reveal" data-delay="3">
+          <i class="ti ti-chart-bar" aria-hidden="true"></i>
+          <h3>Analytics &amp; Performance</h3>
+          <p>Reading platform data to find what works, then optimizing content and campaigns to grow reach, engagement, and qualified audience acquisition.</p>
+        </article>
+        <article class="service-card reveal" data-delay="1">
+          <i class="ti ti-sparkles" aria-hidden="true"></i>
+          <h3>AI-Assisted Workflows</h3>
+          <p>Using tools like ChatGPT, Claude, Canva, Later and Buffer to speed up production and reporting, while keeping a human eye on quality and brand voice.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="work" aria-labelledby="work-title">
+      <p class="section-label reveal">Selected Work</p>
+      <h2 id="work-title" class="reveal" data-delay="1">Proven, Measurable Impact</h2>
+      <div class="case-container">
+
+        <article class="case-card-premium reveal">
+          <div class="case-info">
+            <span class="case-tag">Healthcare Communications</span>
+            <h3>Medserve &mdash; LUTH Cancer Centre</h3>
+            <p class="case-desc">Led multi-channel digital communications for a major healthcare initiative, managing brand visibility across awareness campaigns and growing organic performance on Facebook, YouTube and LinkedIn.</p>
+            <a class="btn-case-cta" href="#connect">Discuss This Project</a>
+          </div>
+          <div class="case-metrics-panel">
+            <div class="metric-box">
+              <div class="metric-value">28.6K</div>
+              <div class="metric-label">Facebook profile views</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">131.6K</div>
+              <div class="metric-label">YouTube content impressions</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">+57.6%</div>
+              <div class="metric-label">LinkedIn organic engagement growth</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card-premium reveal">
+          <div class="case-info">
+            <span class="case-tag">E-Commerce Growth</span>
+            <h3>Ade Gadgets</h3>
+            <p class="case-desc">Built and managed organic content funnels on X (formerly Twitter) to drive inbound interest, product click-throughs, and repeat-customer engagement for a consumer electronics retailer.</p>
+            <a class="btn-case-cta" href="https://x.com/ade_gadgets?s=11" target="_blank" rel="noopener noreferrer">View Live Channel &rarr;</a>
+          </div>
+          <div class="case-metrics-panel">
+            <div class="metric-box">
+              <div class="metric-value">1.1K+</div>
+              <div class="metric-label">Audience interaction touchpoints</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">Organic</div>
+              <div class="metric-label">Lead generation &amp; conversion focus</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card-premium reveal">
+          <div class="case-info">
+            <span class="case-tag">Lifestyle &amp; Community</span>
+            <h3>TeshMi Highlights</h3>
+            <p class="case-desc">Developed a consistent Instagram content system and posting schedule designed for retention, lifting engagement across the account's core community.</p>
+            <a class="btn-case-cta" href="https://www.instagram.com/tesh_highlight?igsh=MXh4NXh2a2pjMml4Zg==" target="_blank" rel="noopener noreferrer">View Live Feed &rarr;</a>
+          </div>
+          <div class="case-metrics-panel">
+            <div class="metric-box">
+              <div class="metric-value">High</div>
+              <div class="metric-label">Video audience retention</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value">Active</div>
+              <div class="metric-label">Community engagement loop</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="connect" aria-labelledby="connect-title">
+    <div class="ai-universe" aria-hidden="true">
+      <div class="ai-node node-1"><i class="ti ti-brand-meta"></i> Meta Suite</div>
+      <div class="ai-node node-2"><i class="ti ti-sparkles"></i> Claude &amp; Gemini</div>
+      <div class="ai-node node-3"><i class="ti ti-brand-tiktok"></i> TikTok Analytics</div>
+      <div class="ai-node node-4"><i class="ti ti-calendar-time"></i> Later / Buffer</div>
     </div>
 
     <div class="footer-content">
-      <h2>Let’s Build Something Lasting</h2>
-      <p class="footer-lead">Looking for a strategist who bridges content storytelling, audience management, and tech-driven optimization? Let’s map out your growth blueprint.</p>
-      
-      <!-- Interactive CV Zone matching your CSS definition -->
+      <h2 id="connect-title">Let's Scale Together</h2>
+      <p class="footer-lead">Available for high-impact remote roles or hybrid positions in Lagos, Nigeria. Let's talk about your brand's next stage of growth.</p>
+
       <div class="download-zone">
-        <h3>Ready for Business Selection</h3>
-        <p style="color: #64748b; margin-bottom: 2rem;">Get instant delivery of my professional experiences, system stacks, and workflow matrix.</p>
-        <a class="btn-primary" href="mailto:joshire321@gmail.com?subject=Requesting%20CV%20-%20Joshua%20Ire">Request Full CV via Email</a>
+        <h3>Resume &amp; Career Documentation</h3>
+        <p>Review my full background across campaign strategy, community management, and growth frameworks.</p>
+        <a class="btn-primary" href="Joshua_Ire_Social_Media_Manager_CV_3.pdf" download="Joshua_Ire_Social_Media_Manager_CV.pdf">
+          <i class="ti ti-download" aria-hidden="true"></i> Download Resume / CV
+        </a>
       </div>
 
       <div class="footer-links">
-        <a href="mailto:joshire321@gmail.com"><i class="ti ti-mail"></i> Email Inquiries</a>
-        <a href="tel:+2348133902505"><i class="ti ti-phone"></i> +234 8133902505</a>
-        <a href="https://www.linkedin.com/in/joshire-321x" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn Hub</a>
+        <a href="mailto:joshire321@gmail.com"><i class="ti ti-mail" aria-hidden="true"></i> joshire321@gmail.com</a>
+        <a href="tel:+2348133902505"><i class="ti ti-phone" aria-hidden="true"></i> +234 813 390 2505</a>
+        <a href="https://www.linkedin.com/in/joshire-321x" target="_blank" rel="noopener noreferrer"><i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn</a>
       </div>
 
-      <div class="copyright">
-        <p>&copy; 2026 Joshua Ire. Built for High-Scale Digital Implementations.</p>
-      </div>
+      <p class="copyright">&copy; <span id="year">2026</span> Joshua Ire. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', function () {
+      var open = navLinks.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    // Accessible dropdown (click + keyboard)
+    var trigger = document.getElementById('contactTrigger');
+    var dropdown = trigger.closest('.dropdown');
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      var open = dropdown.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close mobile menu when a link is tapped
+    navLinks.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+  </script>
 
 </body>
 </html>
